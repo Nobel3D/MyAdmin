@@ -1,0 +1,71 @@
+  MyAdmin.Credits.resources - Embedded, ContainedInManifestFile, 
+  MyAdmin.Form.Credits.resources - Embedded, ContainedInManifestFile, 
+  MyAdmin.Form.MainForm.resources - Embedded, ContainedInManifestFile, 
+  MyAdmin.Form.MyDedicated.resources - Embedded, ContainedInManifestFile, 
+  MyAdmin.Form.SupportForm.resources - Embedded, ContainedInManifestFile, 
+  MyAdmin.Form.YouKnow.resources - Embedded, ContainedInManifestFile, 
+  MyAdmin.MainForm.resources - Embedded, ContainedInManifestFile, 
+  MyAdmin.MyDedicated.resources - Embedded, ContainedInManifestFile, 
+  MyAdmin.SupportForm.resources - Embedded, ContainedInManifestFile, 
+  MyAdmin.YouKnow.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly MyAdmin, Version=0.0.*, Culture=Lingua inglese (non associata ad alcun paese): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class MyAdmin.Credits: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class MyAdmin.MyDedicated: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getPort(): PrivateScope, Public, HideBySig
+    getPassword(): PrivateScope, Public, HideBySig
+    getDedicatedPath(): PrivateScope, Public, HideBySig
+    changeClick(ToolStripMenuItem): PrivateScope, Public, HideBySig
+    setLevels(ComboBox, Int32): PrivateScope, Public, HideBySig
+    getLevels(Int32): PrivateScope, Public, HideBySig
+    IsExited(): PrivateScope, Public, HideBySig
+Class MyAdmin.SupportForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Rcon): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Players[], Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String TypeForm : Public
+  Methods:
+    getKill(): PrivateScope, Public, HideBySig
+    getMessage(): PrivateScope, Public, HideBySig
+    getSignature(): PrivateScope, Public, HideBySig
+    getMinute(): PrivateScope, Public, HideBySig
+    getIndexBan(): PrivateScope, Public, HideBySig
+    getEnabled(): PrivateScope, Public, HideBySig
+Class MyAdmin.YouKnow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getNext(): PrivateScope, Public, HideBySig
+Class MyAdmin.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.IO.StreamWriter stm_WriteConfig : Public
+    System.IO.StreamReader stm_ReadConfig : Public
+    System.String str_Analyze : Public
+    System.String[][] array_Word : Public
+    System.String[] array_Split : Public, Static
