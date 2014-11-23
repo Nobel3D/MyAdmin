@@ -70,4 +70,21 @@
     <Image Include="Resource\Credits Sam Logo.png" />
     <Image Include="Resource\MyDedicated.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Credits.resx" />
+    <EmbeddedResource Include="Form\Credits.resx" />
+    <EmbeddedResource Include="Form\MainForm.resx" />
+    <EmbeddedResource Include="Form\MyDedicated.resx" />
+    <EmbeddedResource Include="Form\SupportForm.resx" />
+    <EmbeddedResource Include="Form\YouKnow.resx" />
+    <EmbeddedResource Include="MainForm.resx" />
+    <EmbeddedResource Include="MyDedicated.resx" />
+    <EmbeddedResource Include="SupportForm.resx" />
+    <EmbeddedResource Include="YouKnow.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc">
+      <Filter>Extern</Filter>
+    </ResourceCompile>
+  </ItemGroup>
 </Project>

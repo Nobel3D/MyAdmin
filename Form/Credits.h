@@ -134,7 +134,7 @@ namespace MyAdmin {
 			// buttonThanks
 			// 
 			this->buttonThanks->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->buttonThanks->Location = System::Drawing::Point(217, 221);
+			this->buttonThanks->Location = System::Drawing::Point(249, 265);
 			this->buttonThanks->Name = L"buttonThanks";
 			this->buttonThanks->Size = System::Drawing::Size(145, 38);
 			this->buttonThanks->TabIndex = 6;
@@ -146,9 +146,9 @@ namespace MyAdmin {
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(93, 12);
+			this->pictureBox1->Location = System::Drawing::Point(336, 109);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(388, 202);
+			this->pictureBox1->Size = System::Drawing::Size(304, 204);
 			this->pictureBox1->TabIndex = 7;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -156,7 +156,7 @@ namespace MyAdmin {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(591, 271);
+			this->ClientSize = System::Drawing::Size(652, 325);
 			this->Controls->Add(this->buttonThanks);
 			this->Controls->Add(this->linkLabelHexagon);
 			this->Controls->Add(this->linkLabelLoller);

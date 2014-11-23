@@ -1,5 +1,6 @@
 #include "..\stdafx.h"
 #include "Rcon.h"
+#include "Players.h"
 
 using namespace System::Net::Sockets;
 using namespace System::IO;
@@ -183,7 +184,8 @@ bool Rcon::sendData(String^ command)
 
 void Rcon::SamChat(String^ Message)
 {
-	sendData("chatSay(\"" + Message + "\")");
+
+	sendData("chatSay(\"" + Players::markupCode(Message) + "\")");
 }
 
 

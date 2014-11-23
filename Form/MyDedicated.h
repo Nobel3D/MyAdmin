@@ -910,9 +910,9 @@ namespace MyAdmin {
 				 // 
 				 // openFile
 				 // 
-				 this->openFile->FileName = L"Open File";
+				 this->openFile->FileName = L"Give me Serious Sam Dedicated Server";
 				 this->openFile->Filter = L"File (*.exe)|*.exe";
-				 this->openFile->Title = L"Open File";
+				 this->openFile->Title = L"Open Dedicated";
 				 // 
 				 // buttonSave
 				 // 
@@ -1148,7 +1148,7 @@ namespace MyAdmin {
 					 openFile->ShowDialog();
 					 while (openFile->SafeFileName != "SamHD_TSE_DedicatedServer.exe")
 					 {
-						 MessageBox::Show("Selected file isn't valid!", "Error File", MessageBoxButtons::OK, MessageBoxIcon::Error);
+						 MessageBox::Show("Selected file isn't valid! You must select your Serious Sam HD Dedicated Server", "Error File", MessageBoxButtons::OK, MessageBoxIcon::Error);
 						 if (openFile->ShowDialog() == Windows::Forms::DialogResult::Cancel)
 						 {
 							 Exited = true;

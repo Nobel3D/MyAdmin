@@ -48,6 +48,8 @@ namespace MyAdmin {
 				ShowCredits->ShowDialog();
 			}
 			Rcon::addLog("[SYS] Loaded and Ready");
+			settingUpMessage();
+			DidYouKnow();
 		}
 
 	protected:
@@ -109,10 +111,27 @@ namespace MyAdmin {
 	}
 	private: System::Void settingUpMessage()
 	{
-				 form_Message[0] = "";
+				 form_Message[0] = "You can get source code of MyAdmin on GitHub : https://github.com/Nobel3D/MyAdmin Feel free to change the source code, and report any bug.";
+				 form_Message[1] = "You can change the signature on chat and set any timed message, Set your MyAdmin how you liking!";
+				 form_Message[2] = "You can use all command of Serious Sam on the textbox \"Send Rcon\". For example you can use \"samShowBanList()\" for see sam's ban list.";
+				 form_Message[3] = "You can use MyRanked, only if you have setted a database, and you must contact Nobel3D for this stuff: http://steamcommunity.com/groups/Nobel3DOfficial/discussions/1/";
+				 form_Message[4] = "You can ban some player with temporary ban, you can ban a player for 30 min to one month.";
+				 form_Message[5] = "You can create a local server, but keep in your mind that the local ip is: 127.0.0.1 (LocalHost)";
+				 form_Message[6] = "Maybe I will make a version for Serious Sam 3 and Serious Sam Revolution, you stay connected!";
+				 form_Message[7] = "You can see the score on real time, if you have MyRanked on your server";
+				 form_Message[8] = "The òpò is your friend, but if you aren't italian, you can't understand!";
+				 form_Message[9] = "For me, and my experience as admin for some server, the spectators on the match are untouchables!";
 	}
 	private: System::Void DidYouKnow()
 	{
+				 int iCount = 0;
+				 do
+				 {
+					 form_YouKnow = gcnew YouKnow(form_Message[iCount]);
+					 form_YouKnow->ShowDialog();
+					 iCount++;
+				 } 
+				 while (form_YouKnow->getNext()&&iCount!=MAXMESSAGEKNOW);
 	}
 			 /*Transform code adapted from markup code to normal text*/
 			 String^ markupDecode(String^ strText)
@@ -170,9 +189,24 @@ namespace MyAdmin {
 					 EnabledMessage = false;
 				 }
 	}
+
 			 /*Threading isn't secure if I don't use this method*/
 #pragma region Threading secure
 			 delegate void SetTextCallback(String^ text);
+
+			 System::Void addText(String^ AddMe)
+			 {
+				 if (textBoxReceive->InvokeRequired)
+				 {
+
+					 SetTextCallback^ d = gcnew SetTextCallback(this, &MainForm::addText);
+					 this->Invoke(d, gcnew array<Object^> { AddMe });
+				 }
+				 else
+				 {
+					 textBoxReceive->Text += AddMe;
+				 }
+			 }
 
 			 System::Void addComboBox(String^ AddMe)
 			 {
@@ -319,6 +353,7 @@ namespace MyAdmin {
 	private: bool StartRank;
 	private: Thread^ Timer;
 	private: ThreadStart^ StartTimer;
+	private: static String^ str_Help = "";
 	private: static array<String^>^ Spliter = { ": ", ", " };
 	private: static array<String^>^ localSplit = { "\"" };
 	private: array<String^>^ array_Stream;
@@ -395,18 +430,13 @@ namespace MyAdmin {
 	private: System::Windows::Forms::Button^  buttonExit;
 	private: System::Windows::Forms::ComboBox^  comboBoxPlayerRank;
 	private: System::Windows::Forms::ComboBox^  comboBoxPlayer;
-
 	private: System::Windows::Forms::Button^  buttonCredits;
 	private: System::Windows::Forms::ToolStripMenuItem^  helpToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  didYouKnowToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  creditsToolStripMenuItem;
-	private: System::Windows::Forms::TextBox^  textBox1;
+private: System::Windows::Forms::TextBox^  textBoxReceive;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 private: System::Windows::Forms::PictureBox^  pictureBox2;
-
-
-
-
 	private: System::ComponentModel::IContainer^  components;
 #pragma endregion
 
@@ -475,7 +505,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 				 this->textBoxRcon = (gcnew System::Windows::Forms::TextBox());
 				 this->buttonRcon = (gcnew System::Windows::Forms::Button());
 				 this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-				 this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+				 this->textBoxReceive = (gcnew System::Windows::Forms::TextBox());
 				 this->textBoxChat = (gcnew System::Windows::Forms::TextBox());
 				 this->buttonChat = (gcnew System::Windows::Forms::Button());
 				 this->textBoxStatus = (gcnew System::Windows::Forms::TextBox());
@@ -802,6 +832,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 				 this->creditsToolStripMenuItem->Name = L"creditsToolStripMenuItem";
 				 this->creditsToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 				 this->creditsToolStripMenuItem->Text = L"Credits";
+				 this->creditsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::creditsToolStripMenuItem_Click);
 				 // 
 				 // timer
 				 // 
@@ -983,7 +1014,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 				 // 
 				 // groupBox1
 				 // 
-				 this->groupBox1->Controls->Add(this->textBox1);
+				 this->groupBox1->Controls->Add(this->textBoxReceive);
 				 this->groupBox1->Controls->Add(this->buttonRcon);
 				 this->groupBox1->Controls->Add(this->textBoxRcon);
 				 this->groupBox1->Controls->Add(this->buttonRanked);
@@ -1003,14 +1034,14 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 				 this->groupBox1->TabIndex = 25;
 				 this->groupBox1->TabStop = false;
 				 // 
-				 // textBox1
+				 // textBoxReceive
 				 // 
-				 this->textBox1->Location = System::Drawing::Point(31, 141);
-				 this->textBox1->Multiline = true;
-				 this->textBox1->Name = L"textBox1";
-				 this->textBox1->ReadOnly = true;
-				 this->textBox1->Size = System::Drawing::Size(710, 86);
-				 this->textBox1->TabIndex = 37;
+				 this->textBoxReceive->Location = System::Drawing::Point(31, 141);
+				 this->textBoxReceive->Multiline = true;
+				 this->textBoxReceive->Name = L"textBoxReceive";
+				 this->textBoxReceive->ReadOnly = true;
+				 this->textBoxReceive->Size = System::Drawing::Size(710, 86);
+				 this->textBoxReceive->TabIndex = 37;
 				 // 
 				 // textBoxChat
 				 // 
@@ -1312,7 +1343,11 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 					 {
 						 Multy++;
 						 if (Connection->getOnline())
+						 {
 							 Connection->sendData("samVoteFail()");
+							 if (StartRank)
+								 Connection->SamChat("Log: ~ This match will be ranked! ~");
+						 }
 					 }
 				 }
 				 if (str_Timer != ""&&int_Timer != 0 && Connection->getOnline() == true)
@@ -1367,10 +1402,8 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 					 str_Analyze = Connection->getLine();
 					 if (str_Analyze != "")
 					 {
-						 if (str_Analyze != ">")
-							 RasLog->WriteLine(DateTime::Now + " -> " + str_Analyze);
-
 						 array_Stream = str_Analyze->Split(Spliter, StringSplitOptions::None);
+
 						 if (array_Stream[0]->StartsWith("Server accepted connection from IP"))
 						 {
 							 array_Stream[3] = array_Stream[3]->Replace(".", "");
@@ -1438,7 +1471,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 							 }
 
 						 }
-						 if (array_Stream[0] == "\r<chat player=")
+						 if (array_Stream[0]->StartsWith("<chat player="))
 						 {
 							 //Ignore
 						 }
@@ -1579,12 +1612,26 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 				 if (!form_MyDedicated->IsExited())
 				 {
 					 Connection = gcnew Rcon("127.0.0.1", form_MyDedicated->getPort(), form_MyDedicated->getPassword());
+					 Connection->connectRcon();
 					 StartTimer = gcnew ThreadStart(this, &MainForm::ThreadTimer);
 					 Timer = gcnew Thread(StartTimer);
 					 Timer->Start();
 					 Thread::Sleep(1000);
-					 buttonUsing(true);
-					 MyDedicatedPath = form_MyDedicated->getDedicatedPath();
+					 if (!Connection->getOnline())
+					 {
+						 MessageBox::Show("Generic: Error connecting from Rcon.", "ERROR 02", MessageBoxButtons::OK, MessageBoxIcon::Error);
+						 textBoxStatus->Text = Connection->getStatus();
+					 }
+					 else
+					 {
+						 MessageBox::Show("Connection is started.", "Initialize", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+						 textPassword->Text = "#PASSWORD#";
+						 textBoxStatus->Text = Connection->getStatus();
+
+						 Connection->sendData("chatSay(\"Log: Some Admin has started a GUI MyAdmin by Nobel3D\")");
+						 buttonUsing(true);
+					 }
 				 }
 	}
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) { //Ranked
@@ -1605,10 +1652,6 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 					 " Dead: " + array_Player[comboBoxPlayerRank->SelectedIndex]->getDead() +
 					 " Score: " + array_Player[comboBoxPlayerRank->SelectedIndex]->getPoint(),
 					 "Score", MessageBoxButtons::OK, MessageBoxIcon::Information);
-	}
-	private: System::Void buttonRefresh_Click(System::Object^  sender, System::EventArgs^  e) {
-
-				 MessageBox::Show("Vuoi un biscotto ora? *Trolled*");
 	}
 	private: System::Void buttonCredits_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Credits^ ShowCredits = gcnew Credits();
@@ -1631,7 +1674,11 @@ private: System::Windows::Forms::PictureBox^  pictureBox2;
 				 }
 	}
 	private: System::Void didYouKnowToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-
+				 DidYouKnow();
 	}
-	};
+	private: System::Void creditsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Credits^ ShowCredits = gcnew Credits();
+				 ShowCredits->ShowDialog();
+	}
+};
 }
