@@ -9,7 +9,7 @@
   MyAdmin.SupportForm.resources - Embedded, ContainedInManifestFile, 
   MyAdmin.YouKnow.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
-Assembly MyAdmin, Version=0.0.*, Culture=Lingua inglese (non associata ad alcun paese): 
+Assembly MyAdmin, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -38,6 +38,7 @@ Class MyAdmin.MyDedicated: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     changeClick(ToolStripMenuItem): PrivateScope, Public, HideBySig
     setLevels(ComboBox, Int32): PrivateScope, Public, HideBySig
     getLevels(Int32): PrivateScope, Public, HideBySig
+    timeScript(): PrivateScope, Public, HideBySig
     IsExited(): PrivateScope, Public, HideBySig
 Class MyAdmin.SupportForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form

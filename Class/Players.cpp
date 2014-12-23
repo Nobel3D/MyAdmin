@@ -138,17 +138,17 @@ Players^ Players::Load(System::String^ ID, int SamIndex)
 	return notLoaded;
 }
 
-Players^ Players::Load(System::String^ ID,System::String^ Name, int SamIndex)
+Players^ Players::Load(System::String^ ID, System::String^ Name, int SamIndex)
 {
 	String^ NAME = markupCode(Name);
 	array<array<String^>^>^ dbFind = dbUsed->Query("SELECT * FROM players WHERE steamPlayer");
 	if (dbUsed->getInitialize())
-	for (int i = 0; i < dbFind->Length;i++)
-	if (dbFind[i][1] == ID)
-	{
-		Players^ Loaded = gcnew Players(dbFind[i][1], dbFind[i][6], Convert::ToInt32(dbFind[i][2]), Convert::ToInt32(dbFind[i][4]), Convert::ToInt32(dbFind[i][3]), SamIndex, Convert::ToInt32(dbFind[i][0]));
-		return Loaded;
-	}
+		for (int i = 0; i < dbFind->Length; i++)
+			if (dbFind[i][1] == ID)
+			{
+				Players^ Loaded = gcnew Players(dbFind[i][1], dbFind[i][6], Convert::ToInt32(dbFind[i][2]), Convert::ToInt32(dbFind[i][4]), Convert::ToInt32(dbFind[i][3]), SamIndex, Convert::ToInt32(dbFind[i][0]));
+				return Loaded;
+			}
 	dbUsed->Query("INSERT INTO `players` (`steamPlayer`,`killPlayer`,`pointPlayer`,`deadPlayer`,`adminPlayer`,`namePlayer`) VALUES( '" + ID + "' ,0,1500,0,0, ' " + NAME + " ' )");
 	Players^ notLoaded = gcnew Players(ID, Name, SamIndex);
 	return notLoaded;

@@ -236,6 +236,27 @@ namespace MyAdmin {
 			return Level;
 
 		}
+
+		System::Void timeScript()
+		{
+			if (checkBox1->Checked)
+			{
+				String^ PathScript = Exe->Replace("Bin\\SamHD_TSE_DedicatedServer.exe", "Content\\SeriousSamHD_TSE\\SGUIHD.lua");
+				if (!IO::File::Exists(PathScript)) //Message Script
+				{
+					IO::StreamWriter^ LuaScript = gcnew IO::StreamWriter(PathScript, false);
+					LuaScript->Write("Wait(Delay(60));" + "\n" +
+						"globals.interChat = function()" + "\n" +
+						"    chatSay(\"" + textBoxScript->Text + "\");" + "\n" +
+						"    Wait(Delay(" + numScript->Value * 60 + "));" + "\n" +
+						"    globals.interChat();" + "\n"
+						"end" + "\n"
+						"globals.interChat();" + "\n" + "\n");
+					LuaScript->Close();
+				}
+				Args += " +exec \"Content/SeriousSamHD_TSE/SGUIHD.lua\"";
+			}
+		}
 		/*constructor of the MyDedicated form*/
 		MyDedicated(String^ SamDirectory)
 		{
@@ -263,6 +284,7 @@ namespace MyAdmin {
 	private: String^ Password;
 	private: bool Exited;
 	private: String^ Exe;
+	private: String^ Args;
 
 #pragma region Form Pointer
 	private: System::Windows::Forms::Label^  label12;
@@ -322,6 +344,14 @@ namespace MyAdmin {
 	private: System::Windows::Forms::Button^  buttonSave;
 	private: System::Windows::Forms::Button^  buttonLoad;
 	private: System::Windows::Forms::OpenFileDialog^  openConfig;
+private: System::Windows::Forms::Label^  label15;
+private: System::Windows::Forms::TextBox^  textBoxScript;
+private: System::Windows::Forms::CheckBox^  checkBox1;
+private: System::Windows::Forms::NumericUpDown^  numScript;
+
+
+
+
 
 	private: System::ComponentModel::Container ^components;
 #pragma endregion
@@ -386,6 +416,10 @@ namespace MyAdmin {
 				 this->buttonSave = (gcnew System::Windows::Forms::Button());
 				 this->buttonLoad = (gcnew System::Windows::Forms::Button());
 				 this->openConfig = (gcnew System::Windows::Forms::OpenFileDialog());
+				 this->label15 = (gcnew System::Windows::Forms::Label());
+				 this->textBoxScript = (gcnew System::Windows::Forms::TextBox());
+				 this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+				 this->numScript = (gcnew System::Windows::Forms::NumericUpDown());
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numExtraXplayer))->BeginInit();
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numExtra))->BeginInit();
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numFrag))->BeginInit();
@@ -396,6 +430,7 @@ namespace MyAdmin {
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numPlayerMax))->BeginInit();
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numPlayerMin))->BeginInit();
 				 this->menuStrip1->SuspendLayout();
+				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numScript))->BeginInit();
 				 this->SuspendLayout();
 				 // 
 				 // label12
@@ -861,7 +896,7 @@ namespace MyAdmin {
 				 // 
 				 // buttonExit
 				 // 
-				 this->buttonExit->Location = System::Drawing::Point(12, 473);
+				 this->buttonExit->Location = System::Drawing::Point(15, 565);
 				 this->buttonExit->Name = L"buttonExit";
 				 this->buttonExit->Size = System::Drawing::Size(86, 23);
 				 this->buttonExit->TabIndex = 29;
@@ -871,7 +906,7 @@ namespace MyAdmin {
 				 // 
 				 // buttonUpdate
 				 // 
-				 this->buttonUpdate->Location = System::Drawing::Point(472, 473);
+				 this->buttonUpdate->Location = System::Drawing::Point(475, 565);
 				 this->buttonUpdate->Name = L"buttonUpdate";
 				 this->buttonUpdate->Size = System::Drawing::Size(86, 23);
 				 this->buttonUpdate->TabIndex = 28;
@@ -881,7 +916,7 @@ namespace MyAdmin {
 				 // 
 				 // buttonCreate
 				 // 
-				 this->buttonCreate->Location = System::Drawing::Point(216, 402);
+				 this->buttonCreate->Location = System::Drawing::Point(219, 494);
 				 this->buttonCreate->Name = L"buttonCreate";
 				 this->buttonCreate->Size = System::Drawing::Size(156, 23);
 				 this->buttonCreate->TabIndex = 27;
@@ -892,7 +927,7 @@ namespace MyAdmin {
 				 // linkLabel1
 				 // 
 				 this->linkLabel1->AutoSize = true;
-				 this->linkLabel1->Location = System::Drawing::Point(146, 483);
+				 this->linkLabel1->Location = System::Drawing::Point(149, 575);
 				 this->linkLabel1->Name = L"linkLabel1";
 				 this->linkLabel1->Size = System::Drawing::Size(294, 13);
 				 this->linkLabel1->TabIndex = 26;
@@ -902,7 +937,7 @@ namespace MyAdmin {
 				 // 
 				 // textBoxStatus
 				 // 
-				 this->textBoxStatus->Location = System::Drawing::Point(9, 447);
+				 this->textBoxStatus->Location = System::Drawing::Point(12, 539);
 				 this->textBoxStatus->Name = L"textBoxStatus";
 				 this->textBoxStatus->ReadOnly = true;
 				 this->textBoxStatus->Size = System::Drawing::Size(565, 20);
@@ -916,7 +951,7 @@ namespace MyAdmin {
 				 // 
 				 // buttonSave
 				 // 
-				 this->buttonSave->Location = System::Drawing::Point(9, 402);
+				 this->buttonSave->Location = System::Drawing::Point(12, 494);
 				 this->buttonSave->Name = L"buttonSave";
 				 this->buttonSave->Size = System::Drawing::Size(89, 23);
 				 this->buttonSave->TabIndex = 30;
@@ -926,7 +961,7 @@ namespace MyAdmin {
 				 // 
 				 // buttonLoad
 				 // 
-				 this->buttonLoad->Location = System::Drawing::Point(472, 402);
+				 this->buttonLoad->Location = System::Drawing::Point(475, 494);
 				 this->buttonLoad->Name = L"buttonLoad";
 				 this->buttonLoad->Size = System::Drawing::Size(86, 23);
 				 this->buttonLoad->TabIndex = 31;
@@ -939,11 +974,52 @@ namespace MyAdmin {
 				 this->openConfig->FileName = L"FileName";
 				 this->openConfig->Filter = L"File di Configurazione (*.conf)|*.conf";
 				 // 
+				 // label15
+				 // 
+				 this->label15->AutoSize = true;
+				 this->label15->Location = System::Drawing::Point(239, 384);
+				 this->label15->Name = L"label15";
+				 this->label15->Size = System::Drawing::Size(112, 13);
+				 this->label15->TabIndex = 32;
+				 this->label15->Text = L"Timed Message Script";
+				 // 
+				 // textBoxScript
+				 // 
+				 this->textBoxScript->Enabled = false;
+				 this->textBoxScript->Location = System::Drawing::Point(12, 400);
+				 this->textBoxScript->Name = L"textBoxScript";
+				 this->textBoxScript->Size = System::Drawing::Size(559, 20);
+				 this->textBoxScript->TabIndex = 33;
+				 // 
+				 // checkBox1
+				 // 
+				 this->checkBox1->AutoSize = true;
+				 this->checkBox1->Location = System::Drawing::Point(319, 443);
+				 this->checkBox1->Name = L"checkBox1";
+				 this->checkBox1->Size = System::Drawing::Size(56, 17);
+				 this->checkBox1->TabIndex = 34;
+				 this->checkBox1->Text = L"Active";
+				 this->checkBox1->UseVisualStyleBackColor = true;
+				 this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &MyDedicated::checkBox1_CheckedChanged);
+				 // 
+				 // numScript
+				 // 
+				 this->numScript->Enabled = false;
+				 this->numScript->Location = System::Drawing::Point(219, 442);
+				 this->numScript->Name = L"numScript";
+				 this->numScript->Size = System::Drawing::Size(72, 20);
+				 this->numScript->TabIndex = 35;
+				 this->numScript->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2, 0, 0, 0 });
+				 // 
 				 // MyDedicated
 				 // 
 				 this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 				 this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-				 this->ClientSize = System::Drawing::Size(586, 508);
+				 this->ClientSize = System::Drawing::Size(586, 596);
+				 this->Controls->Add(this->numScript);
+				 this->Controls->Add(this->checkBox1);
+				 this->Controls->Add(this->textBoxScript);
+				 this->Controls->Add(this->label15);
 				 this->Controls->Add(this->buttonLoad);
 				 this->Controls->Add(this->buttonSave);
 				 this->Controls->Add(this->buttonExit);
@@ -978,14 +1054,18 @@ namespace MyAdmin {
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numPlayerMin))->EndInit();
 				 this->menuStrip1->ResumeLayout(false);
 				 this->menuStrip1->PerformLayout();
+				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numScript))->EndInit();
 				 this->ResumeLayout(false);
 				 this->PerformLayout();
 
 			 }
 #pragma endregion
 	private: System::Void buttonCreate_Click(System::Object^  sender, System::EventArgs^  e) {
-				 String^ Args = "";
-
+		if (textBoxPassword->Text == "")
+		{
+			MessageBox::Show("Forget Password! Please, set the password and retry!", "ERROR 06", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
 				 Args += "+port " + textBoxPort->Text;
 
 
@@ -1043,12 +1123,6 @@ namespace MyAdmin {
 					 Args += " +gamemode CooperativeCoinOp";
 				 if (comboBoxMode->SelectedIndex == 11)
 					 Args += " +gamemode TeamSurvival";
-
-				 if (textBoxPassword->Text == "")
-				 {
-					 MessageBox::Show("Forget Password! Set Default Password: GUI", "GUI", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-					 textBoxPassword->Text = "GUI";
-				 }
 
 				 Args += " +rcts_strAdminPassword \"" + textBoxPassword->Text + "\"";
 
@@ -1134,11 +1208,13 @@ namespace MyAdmin {
 				 else
 					 Args += " +prj_strDisabledVoteTypes \"\"";
 
+
 				 if (IO::File::Exists(Exe))
 				 {
 					 PortValue = Convert::ToInt32(textBoxPort->Text);
 					 Password = textBoxPassword->Text;
 					 textBoxStatus->Text = "Started!";
+					 timeScript();
 					 System::Diagnostics::Process::Start(Exe, Args);
 					 MessageBox::Show("Thank you for using MyDedicated -Nobel3D", "This End", MessageBoxButtons::OK, MessageBoxIcon::Information);
 					 MyAdmin::MyDedicated::~MyDedicated();
@@ -1163,6 +1239,7 @@ namespace MyAdmin {
 						 PortValue = Convert::ToInt32(textBoxPort->Text);
 						 Password = textBoxPassword->Text;
 						 textBoxStatus->Text = "Started!";
+						 timeScript();
 						 System::Diagnostics::Process::Start(Exe, Args);
 						 MessageBox::Show("Thank you for using MyDedicated -Nobel3D", "This End", MessageBoxButtons::OK, MessageBoxIcon::Information);
 						 MyAdmin::MyDedicated::~MyDedicated();
@@ -1354,5 +1431,19 @@ namespace MyAdmin {
 
 				 MessageBox::Show("Your configuration has been loaded!", "Loaded", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
-	};
+	private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+				 if (!checkBox1->Checked)
+				 {
+					 checkBox1->Checked = false;
+					 textBoxScript->Enabled = false;
+					 numScript->Enabled = false;
+				 }
+				 else
+				 {
+					 checkBox1->Checked = true;
+					 textBoxScript->Enabled = true;
+					 numScript->Enabled = true;
+				 }
+	}
+};
 }

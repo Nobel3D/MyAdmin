@@ -291,7 +291,11 @@ namespace MyAdmin {
 							 }
 							 else
 							 {
-								 array_Player[playerJoined] = Players::Load(ID, Nick, playerJoined);
+								 if (StartRank)
+									 array_Player[playerJoined] = Players::Load(ID, Nick, playerJoined);
+								 else
+									 array_Player[playerJoined] = gcnew Players(ID, Nick, playerJoined);
+
 								 addComboBox(Nick);
 								 addComboBoxRank(Nick);
 								 Connection->addLog("[RAS] Player: " + Nick + "; ID: " + ID + "; Index:" + playerJoined + "; Loaded");
@@ -319,7 +323,7 @@ namespace MyAdmin {
 	private: static String^ str_KillMessage = "'opo'";
 	private: static String^ str_SuicideMessage = "xddd";
 	private: static String^ str_Message = "Admin";
-	private: static String^ Version = "1.5";
+	private: static String^ Version = "1.6 BETA 1";
 	private: static String^ MyDedicatedPath = "";
 	private: array<array<String^>^>^ FirstString;
 			 //Config file MyAdmin.conf

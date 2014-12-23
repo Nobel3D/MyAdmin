@@ -1,28 +1,20 @@
-﻿Compilazione avviata 18/11/2014 03:04:33.
-     1>Progetto "C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\MyAdmin.vcxproj" sul nodo 2 (destinazioni: Build).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(357,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+﻿Build started 21/12/2014 11:51:03.
+     1>Project "C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\MyAdmin.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(364,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /GL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.0\MySql.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Form\MyDedicated.cpp Form\SupportForm.cpp Form\YouKnow.cpp
-         MyDedicated.cpp
-         SupportForm.cpp
-     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\SupportForm.h(41): warning C4677: 'SupportForm': la firma del membro non privato contiene il tipo privato di assembly 'Players'
-                 c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\..\Class\Players.h(13): vedere la dichiarazione di 'Players'
-     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\SupportForm.h(147): warning C4677: 'SupportForm': la firma del membro non privato contiene il tipo privato di assembly 'Rcon'
-                 c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\..\Class\Rcon.h(7): vedere la dichiarazione di 'Rcon'
-         YouKnow.cpp
-         Generazione del codice in corso...
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /GL /D _UNICODE /D UNICODE /Gm- /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.0\MySql.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Form\MainForm.cpp
          MainForm.cpp
-     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\SupportForm.h(41): warning C4677: 'SupportForm': la firma del membro non privato contiene il tipo privato di assembly 'Players'
-                 c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\..\Class\Players.h(13): vedere la dichiarazione di 'Players'
-     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\SupportForm.h(147): warning C4677: 'SupportForm': la firma del membro non privato contiene il tipo privato di assembly 'Rcon'
-                 c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\..\Class\Rcon.h(7): vedere la dichiarazione di 'Rcon'
-     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(1427): warning C4101: 'ex': variabile locale senza riferimenti
-     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(1485): warning C4101: 'ex': variabile locale senza riferimenti
-     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(1523): warning C4101: 'NotLoadMatch': variabile locale senza riferimenti
-     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(1567): warning C4101: 'w': variabile locale senza riferimenti
+     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\SupportForm.h(41): warning C4677: 'SupportForm': signature of non-private member contains assembly private type 'Players'
+                 c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\..\Class\Players.h(13) : see declaration of 'Players'
+     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\SupportForm.h(147): warning C4677: 'SupportForm': signature of non-private member contains assembly private type 'Rcon'
+                 c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\..\Class\Rcon.h(7) : see declaration of 'Rcon'
+     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(1464): warning C4101: 'ex' : unreferenced local variable
+     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(1522): warning C4101: 'ex' : unreferenced local variable
+     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(1560): warning C4101: 'NotLoadMatch' : unreferenced local variable
+     1>c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(1604): warning C4101: 'w' : unreferenced local variable
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\Debug\Bin\MyAdmin.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\MyAdmin.Credits.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.Credits.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.MainForm.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.MyDedicated.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.SupportForm.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.YouKnow.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.MainForm.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.MyDedicated.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.SupportForm.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.YouKnow.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\Debug\Bin\MyAdmin.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /LTCG /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Database.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\Debug\Bin\MyAdmin.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\MyAdmin.Credits.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.Credits.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.MainForm.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.MyDedicated.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.SupportForm.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.Form.YouKnow.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.MainForm.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.MyDedicated.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.SupportForm.resources /ASSEMBLYRESOURCE:Debug\MyAdmin.YouKnow.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\Debug\Bin\MyAdmin.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /LTCG /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\Database.obj
          Debug\Players.obj
          Debug\Rcon.obj
          Debug\Credits.obj
@@ -31,11 +23,11 @@
          Debug\SupportForm.obj
          Debug\YouKnow.obj
          "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
-     1>LINK : warning LNK4075: '/INCREMENTAL' ignorato a causa della specifica di '/LTCG'
-         LINK : è stata specificata l'opzione /LTCG ma non è richiesta la generazione del codice; rimuovere /LTCG dalla riga di comando del collegamento per migliorare le prestazioni del linker
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+         LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
          MyAdmin.vcxproj -> C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\Debug\Bin\MyAdmin.exe
-     1>Compilazione progetto "C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\MyAdmin.vcxproj" (destinazioni: Build) completata.
+     1>Done Building Project "C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\MyAdmin.vcxproj" (Build target(s)).
 
-Compilazione completata.
+Build succeeded.
 
-Tempo trascorso 00:00:01.35
+Time Elapsed 00:00:01.12
