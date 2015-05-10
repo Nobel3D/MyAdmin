@@ -16,14 +16,15 @@ Rcon::Rcon(String^ _IPServer, int _PortServer, String^ _Password)
 
 Rcon::~Rcon()
 {
-	addLog("[SYS] Closing connection from "+IPServer+" : "+PortServer);
-	Status = "Disconnecting";
-	iReader->Close();
-	iStream->Close();
-	Client->Close();
-	IPServer = "";
-	PortServer = 0;
-	RconConnected = false;
+	if (RconConnected == true)
+	{
+		addLog("[SYS] Closing connection from " + IPServer + " : " + PortServer);
+		Status = "Disconnecting";
+		iReader->Close();
+		iStream->Close();
+		Client->Close();
+		RconConnected = false;
+	}
 }
 
 bool Rcon::connectRcon()
@@ -175,10 +176,7 @@ bool Rcon::sendData(String^ command)
 	{
 		addLog("[SYS] fatal error on writing into stream");
 		this->~Rcon();
-		Windows::Forms::MessageBox::Show("There was an error in writing into the stream data, I am sorry, MyAdmin will be close", "ERROR WRITE",
-			Windows::Forms::MessageBoxButtons::OK,
-			Windows::Forms::MessageBoxIcon::Error);
-		Windows::Forms::Application::Exit();
+		Status = "There was an error in writing into the stream data";
 	}
 }
 
@@ -191,9 +189,40 @@ void Rcon::SamChat(String^ Message)
 
 void Rcon::addLog(String^ Log)
 {
-	IO::StreamWriter^ LogWriter = gcnew StreamWriter("Log.txt", true);
+	IO::StreamWriter^ LogWriter = gcnew StreamWriter("netlog.txt", true);
+	LogWriter->WriteLine(this->getIPServer() + ":" + this->getPortServer() + "-" + DateTime::Now + " -> " + Log);
+	LogWriter->Close();
+}
+
+void Rcon::addLog2(String^ Log)
+{
+	IO::StreamWriter^ LogWriter = gcnew StreamWriter("mainlog.txt", true);
 	LogWriter->WriteLine(DateTime::Now + " -> " + Log);
 	LogWriter->Close();
+}
+
+String^ Rcon::markupDecode(String^ strText)
+{
+	String^ ret = strText;
+	ret = ret->Replace("&lt;", "<");
+	ret = ret->Replace("&gt;", ">");
+	ret = ret->Replace("&quot;", "\"");
+	ret = ret->Replace("&apos;", "'");
+	ret = ret->Replace("&amp;", "&");
+	ret = ret->Replace("\\n", "\n");
+	return ret;
+}
+/*Transform code adapted from normal text to markup code*/
+String^ Rcon::markupEncode(String^ strText)
+{
+	String^ ret = strText;
+	ret = ret->Replace("<", "&lt;");
+	ret = ret->Replace(">", "&gt;");
+	ret = ret->Replace("\"", "&quot;");
+	ret = ret->Replace("'", "&apos;");
+	ret = ret->Replace("&", "&amp;");
+	ret = ret->Replace("\n", "\\n");
+	return ret;
 }
 
 void Rcon::setStatus(String^ _Status) { Status = _Status; }

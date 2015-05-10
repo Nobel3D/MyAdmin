@@ -26,3 +26,834 @@
 18/11/2014 02:58:56 -> [SYS] Loaded and Ready
 18/11/2014 03:04:35 -> [SYS] System Loading
 18/11/2014 03:04:36 -> [SYS] Loaded and Ready
+18/11/2014 15:51:07 -> [SYS] System Loading
+18/11/2014 15:51:08 -> [SYS] Loaded and Ready
+18/11/2014 17:13:16 -> [SYS] System Loading
+18/11/2014 17:13:18 -> [SYS] Loaded and Ready
+18/11/2014 17:25:07 -> [SYS] System Loading
+18/11/2014 17:25:08 -> [SYS] Loaded and Ready
+18/11/2014 17:25:31 -> [SYS] System Loading
+18/11/2014 17:25:32 -> [SYS] Loaded and Ready
+18/11/2014 17:26:22 -> [SYS] System Loading
+18/11/2014 17:26:24 -> [SYS] Loaded and Ready
+18/11/2014 17:28:11 -> [SYS] System Loading
+18/11/2014 17:28:12 -> [SYS] Loaded and Ready
+18/11/2014 17:28:59 -> [SYS] System Loading
+18/11/2014 17:29:00 -> [SYS] Loaded and Ready
+18/11/2014 17:29:08 -> [SYS] System Loading
+18/11/2014 17:29:09 -> [SYS] Loaded and Ready
+18/11/2014 17:29:38 -> [SYS] System Loading
+18/11/2014 17:29:39 -> [SYS] Loaded and Ready
+18/11/2014 17:30:08 -> [SYS] System Loading
+18/11/2014 17:30:08 -> [SYS] Loaded and Ready
+18/11/2014 17:30:39 -> [SYS] System Loading
+18/11/2014 17:30:43 -> [SYS] Loaded and Ready
+18/11/2014 17:31:17 -> [SYS] System Loading
+18/11/2014 17:31:18 -> [SYS] Loaded and Ready
+18/11/2014 17:33:45 -> [SYS] System Loading
+18/11/2014 17:33:46 -> [SYS] Loaded and Ready
+18/11/2014 17:34:11 -> [SYS] System Loading
+18/11/2014 17:34:12 -> [SYS] Loaded and Ready
+18/11/2014 17:34:35 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 17:34:35 -> [SYS] Connection initialised.
+18/11/2014 17:34:35 -> [SYS] Logging in...
+18/11/2014 17:34:35 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 17:35:01 -> [SYS] Saving Configurarion
+18/11/2014 17:35:01 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 17:35:01 -> [SYS] Closing Application!
+18/11/2014 17:36:22 -> [SYS] System Loading
+18/11/2014 17:36:22 -> [SYS] Loading Configuration
+18/11/2014 17:36:22 -> [SYS] Loaded and Ready
+18/11/2014 17:36:35 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 17:36:35 -> [SYS] Connection initialised.
+18/11/2014 17:36:35 -> [SYS] Logging in...
+18/11/2014 17:36:35 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 17:36:55 -> [SYS] Saving Configurarion
+18/11/2014 17:36:55 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 17:36:55 -> [SYS] Closing Application!
+18/11/2014 17:41:36 -> [SYS] System Loading
+18/11/2014 17:41:36 -> [SYS] Loading Configuration
+18/11/2014 17:41:36 -> [SYS] Loaded and Ready
+18/11/2014 17:41:47 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 17:41:47 -> [SYS] Connection initialised.
+18/11/2014 17:41:47 -> [SYS] Logging in...
+18/11/2014 17:41:47 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 17:50:27 -> [SYS] System Loading
+18/11/2014 17:50:27 -> [SYS] Loading Configuration
+18/11/2014 17:50:27 -> [SYS] Loaded and Ready
+18/11/2014 17:51:43 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 17:51:43 -> [SYS] Connection initialised.
+18/11/2014 17:51:43 -> [SYS] Logging in...
+18/11/2014 17:51:43 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 17:52:18 -> [SYS] Saving Configurarion
+18/11/2014 17:52:18 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 17:52:18 -> [SYS] Closing Application!
+18/11/2014 17:52:38 -> [SYS] System Loading
+18/11/2014 17:52:38 -> [SYS] Loading Configuration
+18/11/2014 17:52:38 -> [SYS] Loaded and Ready
+18/11/2014 17:52:50 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 17:52:50 -> [SYS] Connection initialised.
+18/11/2014 17:52:50 -> [SYS] Logging in...
+18/11/2014 17:52:50 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 17:54:21 -> [SYS] System Loading
+18/11/2014 17:54:21 -> [SYS] Loading Configuration
+18/11/2014 17:54:21 -> [SYS] Loaded and Ready
+18/11/2014 17:54:29 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 17:54:29 -> [SYS] Connection initialised.
+18/11/2014 17:54:29 -> [SYS] Logging in...
+18/11/2014 17:54:29 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 18:07:05 -> [SYS] System Loading
+18/11/2014 18:07:05 -> [SYS] Loading Configuration
+18/11/2014 18:07:05 -> [SYS] Loaded and Ready
+18/11/2014 18:27:24 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 18:27:24 -> [SYS] Connection initialised.
+18/11/2014 18:27:24 -> [SYS] Logging in...
+18/11/2014 18:27:24 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 18:28:18 -> Server accepted connection from 110000105c1224c
+18/11/2014 18:28:26 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Index:0; Loaded
+18/11/2014 18:30:20 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Server disconnect
+18/11/2014 18:30:20 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Correct Left
+18/11/2014 18:30:22 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:30:22 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:30:22 -> [RAS] Player: &gt;&gt;M&lt;&lt; Nobel3D; ID: 110000105c1224c; Unload
+18/11/2014 18:30:25 -> [RAS] Match started
+18/11/2014 18:30:25 -> 
+18/11/2014 18:32:06 -> Server accepted connection from 110000105c1224c
+18/11/2014 18:32:13 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Index:0; Loaded
+18/11/2014 18:32:27 -> [NSF] Player: >>M<< Nobel3D; ID: 110000105c1224c; Load on ban list
+18/11/2014 18:32:32 -> [NSB] PlayerBanned: >>M<< Nobel3D; IDBanned: 110000105c1224c
+18/11/2014 18:32:33 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Server disconnect
+18/11/2014 18:32:33 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Correct Left
+18/11/2014 18:32:34 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:32:34 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:32:34 -> [RAS] Player: &gt;&gt;M&lt;&lt; Nobel3D; ID: 110000105c1224c; Unload
+18/11/2014 18:32:39 -> [RAS] Match started
+18/11/2014 18:32:39 -> 
+18/11/2014 18:32:49 -> Server accepted connection from 110000105c1224c
+18/11/2014 18:33:20 -> [RAS] Player: ; ID: 110000105c1224c; Server disconnect
+18/11/2014 18:33:20 -> [RAS] Player: ; ID: 110000105c1224c; Correct Left
+18/11/2014 18:33:20 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:33:20 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:33:21 -> [RAS] Player: &gt;&gt;M&lt;&lt; Nobel3D; ID: 110000105c1224c; Unload
+18/11/2014 18:33:26 -> [RAS] Match started
+18/11/2014 18:33:26 -> 
+18/11/2014 18:33:55 -> [NSB] IDUnBanned: 110000105c1224c
+18/11/2014 18:34:04 -> Server accepted connection from 110000105c1224c
+18/11/2014 18:34:27 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Index:0; Loaded
+18/11/2014 18:37:47 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Server disconnect
+18/11/2014 18:37:47 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Correct Left
+18/11/2014 18:37:47 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:37:47 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:37:47 -> [RAS] Player: &gt;&gt;M&lt;&lt; Nobel3D; ID: 110000105c1224c; Unload
+18/11/2014 18:37:54 -> [RAS] Match started
+18/11/2014 18:37:54 -> 
+18/11/2014 18:38:16 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 18:38:16 -> [SYS] Waiting new Connection
+18/11/2014 18:39:10 -> [SYS] Connecting to server 185.25.205.48 : 27015
+18/11/2014 18:39:10 -> [SYS] Connection initialised.
+18/11/2014 18:39:10 -> [SYS] Logging in...
+18/11/2014 18:39:11 -> [SYS] Rcon error: Incorrect login for Rcon. Rcon has to be terminated.
+18/11/2014 18:40:18 -> [SYS] Connecting to server 185.25.205.48 : 27015
+18/11/2014 18:40:18 -> [SYS] Connection initialised.
+18/11/2014 18:40:18 -> [SYS] Logging in...
+18/11/2014 18:40:18 -> [SYS] Rcon error: Incorrect login for Rcon. Rcon has to be terminated.
+18/11/2014 18:41:00 -> [SYS] Connecting to server 185.25.205.48 : 27020
+18/11/2014 18:41:00 -> [SYS] Connection initialised.
+18/11/2014 18:41:00 -> [SYS] Logging in...
+18/11/2014 18:41:01 -> [SYS] Successful Connection to 185.25.205.48
+18/11/2014 18:41:19 -> Server accepted connection from 110000105c1224c
+18/11/2014 18:41:53 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Index:1; Loaded
+18/11/2014 18:42:36 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Server disconnect
+18/11/2014 18:42:36 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Correct Left
+18/11/2014 18:42:38 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:42:38 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:42:38 -> [RAS] Player: &gt;&gt;M&lt;&lt; Nobel3D; ID: 110000105c1224c; Unload
+18/11/2014 18:43:04 -> Server accepted connection from 110000105c1224c
+18/11/2014 18:43:21 -> Server accepted connection from 1100001097fc6ea
+18/11/2014 18:45:15 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Index:1; Loaded
+18/11/2014 18:48:28 -> [ASP] Chat Send: Vi voglio raccontare una storiella
+18/11/2014 18:48:53 -> [ASP] Chat Send: c era un fungo e un diavolo impestato
+18/11/2014 18:49:16 -> [ASP] Chat Send: che voleva mangiare lo stelo
+18/11/2014 18:50:16 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:50:16 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:50:17 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:50:17 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:50:17 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:50:17 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:50:17 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:50:17 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:50:17 -> [RAS] Player: ; ID: 1100001097fc6ea; Server disconnect
+18/11/2014 18:50:17 -> [RAS] Player: ; ID: 1100001097fc6ea; Correct Left
+18/11/2014 18:50:18 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:50:18 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:50:18 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Server disconnect
+18/11/2014 18:50:18 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Correct Left
+18/11/2014 18:50:18 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:50:18 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:50:26 -> Server accepted connection from 1100001097fc6ea
+18/11/2014 18:50:27 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:50:27 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:50:28 -> [RAS] Player: ; ID: ; Server disconnect
+18/11/2014 18:50:28 -> [RAS] Player: ; ID: ; Correct Left
+18/11/2014 18:50:33 -> Server accepted connection from 11000010b829e97
+18/11/2014 18:50:36 -> [RAS] Player: pac85; ID: 1100001097fc6ea; Index:0; Loaded
+18/11/2014 18:50:39 -> [RAS] Player: About:Blank; ID: 11000010b829e97; Index:1; Loaded
+18/11/2014 18:52:27 -> Server accepted connection from 11000010ae8096d
+18/11/2014 18:52:33 -> [RAS] Player: Asto24; ID: 11000010ae8096d; Index:2; Loaded
+18/11/2014 18:55:30 -> [RAS] Match started
+18/11/2014 18:55:30 -> 
+18/11/2014 18:56:30 -> [ASP] Chat Send: Lezzi xddd
+18/11/2014 18:57:04 -> [ASP] Chat Send: xddd
+18/11/2014 18:57:52 -> [SYS] Saving Configurarion
+18/11/2014 18:57:52 -> [SYS] Closing connection from 185.25.205.48 : 27020
+18/11/2014 18:57:52 -> [SYS] Closing Application!
+18/11/2014 19:02:21 -> [SYS] System Loading
+18/11/2014 19:02:21 -> [SYS] Loading Configuration
+18/11/2014 19:02:21 -> [SYS] Loaded and Ready
+18/11/2014 19:03:23 -> [SYS] System Loading
+18/11/2014 19:03:23 -> [SYS] Loading Configuration
+18/11/2014 19:03:23 -> [SYS] Loaded and Ready
+18/11/2014 19:09:50 -> [SYS] System Loading
+18/11/2014 19:09:50 -> [SYS] Loading Configuration
+18/11/2014 19:09:50 -> [SYS] Loaded and Ready
+18/11/2014 19:11:09 -> [SYS] System Loading
+18/11/2014 19:11:09 -> [SYS] Loading Configuration
+18/11/2014 19:11:09 -> [SYS] Loaded and Ready
+18/11/2014 19:11:57 -> [SYS] fatal error on writing into stream
+18/11/2014 19:11:57 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 19:12:03 -> [SYS] System Loading
+18/11/2014 19:12:03 -> [SYS] Loading Configuration
+18/11/2014 19:12:03 -> [SYS] Loaded and Ready
+18/11/2014 19:12:15 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 19:12:15 -> [SYS] Connection initialised.
+18/11/2014 19:12:15 -> [SYS] Logging in...
+18/11/2014 19:12:15 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 19:12:24 -> [RAS] Match started
+18/11/2014 19:12:24 -> 
+18/11/2014 19:16:30 -> [SYS] Saving Configurarion
+18/11/2014 19:16:30 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 19:16:30 -> [SYS] Closing Application!
+18/11/2014 19:19:26 -> [SYS] System Loading
+18/11/2014 19:19:26 -> [SYS] Loading Configuration
+18/11/2014 19:19:26 -> [SYS] Loaded and Ready
+18/11/2014 19:20:02 -> [SYS] System Loading
+18/11/2014 19:20:02 -> [SYS] Loading Configuration
+18/11/2014 19:20:02 -> [SYS] Loaded and Ready
+18/11/2014 19:20:34 -> [SYS] fatal error on writing into stream
+18/11/2014 19:20:34 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 19:20:41 -> [SYS] System Loading
+18/11/2014 19:20:41 -> [SYS] Loading Configuration
+18/11/2014 19:20:41 -> [SYS] Loaded and Ready
+18/11/2014 19:21:18 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 19:21:18 -> [SYS] Connection initialised.
+18/11/2014 19:21:18 -> [SYS] Logging in...
+18/11/2014 19:21:18 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 19:22:20 -> Server accepted connection from 110000105c1224c
+18/11/2014 19:22:27 -> [RAS] Player: >>M<< Nobel3D; ID: 110000105c1224c; Index:0; Loaded
+18/11/2014 19:23:39 -> [SYS] Saving Configurarion
+18/11/2014 19:23:39 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 19:23:39 -> [SYS] Closing Application!
+18/11/2014 19:26:15 -> [SYS] System Loading
+18/11/2014 19:26:15 -> [SYS] Loading Configuration
+18/11/2014 19:26:15 -> [SYS] Loaded and Ready
+18/11/2014 19:26:25 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 19:26:25 -> [SYS] Connection initialised.
+18/11/2014 19:26:25 -> [SYS] Logging in...
+18/11/2014 19:26:25 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 19:27:35 -> [SYS] Saving Configurarion
+18/11/2014 19:27:35 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 19:27:35 -> [SYS] Closing Application!
+18/11/2014 19:28:24 -> [SYS] System Loading
+18/11/2014 19:28:24 -> [SYS] Loading Configuration
+18/11/2014 19:28:24 -> [SYS] Loaded and Ready
+18/11/2014 19:28:33 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 19:28:33 -> [SYS] Connection initialised.
+18/11/2014 19:28:33 -> [SYS] Logging in...
+18/11/2014 19:28:33 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 19:29:07 -> [SYS] Saving Configurarion
+18/11/2014 19:29:07 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 19:29:07 -> [SYS] Closing Application!
+18/11/2014 19:32:15 -> [SYS] System Loading
+18/11/2014 19:32:15 -> [SYS] Loading Configuration
+18/11/2014 19:32:15 -> [SYS] Loaded and Ready
+18/11/2014 19:36:14 -> [SYS] System Loading
+18/11/2014 19:36:14 -> [SYS] Loading Configuration
+18/11/2014 19:36:14 -> [SYS] Loaded and Ready
+18/11/2014 19:36:25 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 19:36:25 -> [SYS] Connection initialised.
+18/11/2014 19:36:25 -> [SYS] Logging in...
+18/11/2014 19:36:25 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 19:36:34 -> [ASP] Chat Send: Admin Chat
+18/11/2014 19:36:37 -> [ASP] Chat Send: DSDS
+18/11/2014 19:36:41 -> [ASP] Chat Send: DSDAS
+18/11/2014 19:36:49 -> [SYS] Saving Configurarion
+18/11/2014 19:36:49 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 19:36:49 -> [SYS] Closing Application!
+18/11/2014 19:37:15 -> [SYS] System Loading
+18/11/2014 19:37:15 -> [SYS] Loading Configuration
+18/11/2014 19:37:15 -> [SYS] Loaded and Ready
+18/11/2014 19:37:24 -> [SYS] Connecting to server 127.0.0.1 : 27015
+18/11/2014 19:37:24 -> [SYS] Connection initialised.
+18/11/2014 19:37:24 -> [SYS] Logging in...
+18/11/2014 19:37:24 -> [SYS] Successful Connection to 127.0.0.1
+18/11/2014 19:37:30 -> [ASP] Chat Send: Admin Chat
+18/11/2014 19:37:35 -> [ASP] Chat Send: ERSFSD
+18/11/2014 19:37:39 -> [ASP] Chat Send: DSFS
+18/11/2014 19:37:44 -> [SYS] Saving Configurarion
+18/11/2014 19:37:44 -> [SYS] Closing connection from 127.0.0.1 : 27015
+18/11/2014 19:37:44 -> [SYS] Closing Application!
+18/11/2014 19:38:20 -> [SYS] System Loading
+18/11/2014 19:38:20 -> [SYS] Loading Configuration
+18/11/2014 19:38:20 -> [SYS] Loaded and Ready
+18/11/2014 19:40:18 -> [SYS] System Loading
+18/11/2014 19:40:18 -> [SYS] Loading Configuration
+18/11/2014 19:40:18 -> [SYS] Loaded and Ready
+19/11/2014 23:41:00 -> [SYS] System Loading
+19/11/2014 23:41:00 -> [SYS] Loading Configuration
+19/11/2014 23:41:00 -> [SYS] Loaded and Ready
+23/11/2014 12:58:43 -> [SYS] System Loading
+23/11/2014 12:58:43 -> [SYS] Loading Configuration
+23/11/2014 12:58:43 -> [SYS] Loaded and Ready
+23/11/2014 12:58:53 -> [SYS] Connecting to server 127.0.0.1 : 27015
+23/11/2014 12:58:54 -> [SYS] Connection initialised.
+23/11/2014 12:58:54 -> [SYS] Logging in...
+23/11/2014 12:58:54 -> [SYS] Successful Connection to 127.0.0.1
+23/11/2014 12:58:55 -> [RAS] Match started
+23/11/2014 12:58:55 -> 
+23/11/2014 12:59:09 -> [SYS] Saving Configurarion
+23/11/2014 12:59:09 -> [SYS] Closing connection from 127.0.0.1 : 27015
+23/11/2014 12:59:09 -> [SYS] Closing Application!
+23/11/2014 13:00:04 -> [SYS] System Loading
+23/11/2014 13:00:04 -> [SYS] Loading Configuration
+23/11/2014 13:00:04 -> [SYS] Loaded and Ready
+23/11/2014 13:00:21 -> [SYS] System Loading
+23/11/2014 13:00:21 -> [SYS] Loading Configuration
+23/11/2014 13:00:21 -> [SYS] Loaded and Ready
+23/11/2014 13:03:02 -> [SYS] System Loading
+23/11/2014 13:03:02 -> [SYS] Loading Configuration
+23/11/2014 13:03:02 -> [SYS] Loaded and Ready
+23/11/2014 13:03:52 -> [SYS] System Loading
+23/11/2014 13:03:52 -> [SYS] Loading Configuration
+23/11/2014 13:03:52 -> [SYS] Loaded and Ready
+23/11/2014 13:05:13 -> [SYS] System Loading
+23/11/2014 13:05:13 -> [SYS] Loading Configuration
+23/11/2014 13:05:13 -> [SYS] Loaded and Ready
+20/12/2014 22:21:33 -> [SYS] System Loading
+20/12/2014 22:21:33 -> [SYS] Loading Configuration
+20/12/2014 22:21:33 -> [SYS] Loaded and Ready
+20/12/2014 22:27:28 -> [SYS] System Loading
+20/12/2014 22:27:28 -> [SYS] Loading Configuration
+20/12/2014 22:27:28 -> [SYS] Loaded and Ready
+20/12/2014 22:28:10 -> [SYS] System Loading
+20/12/2014 22:28:10 -> [SYS] Loading Configuration
+20/12/2014 22:28:10 -> [SYS] Loaded and Ready
+20/12/2014 22:59:29 -> [SYS] System Loading
+20/12/2014 22:59:29 -> [SYS] Loading Configuration
+20/12/2014 22:59:29 -> [SYS] Loaded and Ready
+20/12/2014 22:59:58 -> [SYS] Connecting to server 127.0.0.1 : 27015
+20/12/2014 22:59:58 -> [SYS] Connection initialised.
+20/12/2014 22:59:58 -> [SYS] Logging in...
+20/12/2014 22:59:59 -> [SYS] Successful Connection to 127.0.0.1
+20/12/2014 22:59:59 -> [RAS] Match started
+20/12/2014 22:59:59 -> 
+20/12/2014 23:02:10 -> Server accepted connection from 110000105c1224c
+20/12/2014 23:02:13 -> [RAS] Player: Hatsune Miku~; ID: 110000105c1224c; Index:0; Loaded
+20/12/2014 23:05:16 -> [RAS] Player: Hatsune Miku~; ID: 110000105c1224c; Server disconnect
+20/12/2014 23:05:16 -> [RAS] Player: Hatsune Miku~; ID: 110000105c1224c; Correct Left
+20/12/2014 23:05:18 -> [RAS] Player: ; ID: ; Server disconnect
+20/12/2014 23:05:18 -> [RAS] Player: ; ID: ; Correct Left
+20/12/2014 23:05:18 -> [RAS] Player: Hatsune Miku~; ID: 110000105c1224c; Unload
+20/12/2014 23:05:18 -> [RAS] Match started
+20/12/2014 23:05:18 -> 
+20/12/2014 23:15:03 -> [RAS] Match started
+20/12/2014 23:15:03 -> 
+20/12/2014 23:15:09 -> [SYS] Saving Configurarion
+20/12/2014 23:15:09 -> [SYS] Closing connection from 127.0.0.1 : 27015
+20/12/2014 23:15:09 -> [SYS] Closing Application!
+20/12/2014 23:21:46 -> [SYS] System Loading
+20/12/2014 23:21:46 -> [SYS] Loading Configuration
+20/12/2014 23:21:46 -> [SYS] Loaded and Ready
+20/12/2014 23:22:08 -> [SYS] Connecting to server 127.0.0.1 : 27015
+20/12/2014 23:22:09 -> [SYS] Connection initialised.
+20/12/2014 23:22:09 -> [SYS] Logging in...
+20/12/2014 23:22:10 -> [SYS] Successful Connection to 127.0.0.1
+20/12/2014 23:22:10 -> [RAS] Match started
+20/12/2014 23:22:10 -> 
+20/12/2014 23:22:15 -> [SYS] Saving Configurarion
+20/12/2014 23:22:15 -> [SYS] Closing connection from 127.0.0.1 : 27015
+20/12/2014 23:22:15 -> [SYS] Closing Application!
+21/12/2014 01:11:08 -> [SYS] System Loading
+21/12/2014 01:11:08 -> [SYS] Loading Configuration
+21/12/2014 01:11:08 -> [SYS] Loaded and Ready
+21/12/2014 01:23:45 -> [SYS] System Loading
+21/12/2014 01:23:45 -> [SYS] Loading Configuration
+21/12/2014 01:23:45 -> [SYS] Loaded and Ready
+21/12/2014 01:24:06 -> [SYS] System Loading
+21/12/2014 01:24:06 -> [SYS] Loading Configuration
+21/12/2014 01:24:06 -> [SYS] Loaded and Ready
+21/12/2014 01:25:09 -> [SYS] System Loading
+21/12/2014 01:25:09 -> [SYS] Loading Configuration
+21/12/2014 01:25:09 -> [SYS] Loaded and Ready
+21/12/2014 01:28:24 -> [SYS] System Loading
+21/12/2014 01:28:24 -> [SYS] Loading Configuration
+21/12/2014 01:28:24 -> [SYS] Loaded and Ready
+21/12/2014 01:29:00 -> [SYS] System Loading
+21/12/2014 01:29:00 -> [SYS] Loading Configuration
+21/12/2014 01:29:00 -> [SYS] Loaded and Ready
+21/12/2014 01:29:45 -> [SYS] System Loading
+21/12/2014 01:29:45 -> [SYS] Loading Configuration
+21/12/2014 01:29:45 -> [SYS] Loaded and Ready
+21/12/2014 01:30:34 -> [SYS] Connecting to server 127.0.0.1 : 27015
+21/12/2014 01:30:34 -> [SYS] Connection initialised.
+21/12/2014 01:30:34 -> [SYS] Logging in...
+21/12/2014 01:30:34 -> [SYS] Successful Connection to 127.0.0.1
+21/12/2014 01:30:34 -> [RAS] Match started
+21/12/2014 01:30:34 -> 
+21/12/2014 01:32:34 -> [SYS] Saving Configurarion
+21/12/2014 01:32:34 -> [SYS] fatal error on writing into stream
+21/12/2014 01:32:34 -> [SYS] Closing connection from 127.0.0.1 : 27015
+21/12/2014 01:32:35 -> [SYS] Closing connection from  : 0
+21/12/2014 01:32:35 -> [SYS] Closing Application!
+21/12/2014 01:32:38 -> [SYS] System Loading
+21/12/2014 01:32:38 -> [SYS] Loading Configuration
+21/12/2014 01:32:38 -> [SYS] Loaded and Ready
+21/12/2014 01:33:22 -> [SYS] Connecting to server 127.0.0.1 : 27015
+21/12/2014 01:33:22 -> [SYS] Connection initialised.
+21/12/2014 01:33:22 -> [SYS] Logging in...
+21/12/2014 01:33:22 -> [SYS] Successful Connection to 127.0.0.1
+21/12/2014 01:39:33 -> [SYS] System Loading
+21/12/2014 01:39:33 -> [SYS] Loading Configuration
+21/12/2014 01:39:33 -> [SYS] Loaded and Ready
+21/12/2014 01:40:35 -> [SYS] System Loading
+21/12/2014 01:40:35 -> [SYS] Loading Configuration
+21/12/2014 01:40:35 -> [SYS] Loaded and Ready
+21/12/2014 01:41:35 -> [SYS] Connecting to server 127.0.0.1 : 27015
+21/12/2014 01:41:35 -> [SYS] Connection initialised.
+21/12/2014 01:41:35 -> [SYS] Logging in...
+21/12/2014 01:41:35 -> [SYS] Rcon error: Incorrect login for Rcon. Rcon has to be terminated.
+21/12/2014 01:42:09 -> [SYS] System Loading
+21/12/2014 01:42:09 -> [SYS] Loading Configuration
+21/12/2014 01:42:09 -> [SYS] Loaded and Ready
+21/12/2014 01:42:33 -> [SYS] Connecting to server 127.0.0.1 : 27015
+21/12/2014 01:42:33 -> [SYS] Connection initialised.
+21/12/2014 01:42:33 -> [SYS] Logging in...
+21/12/2014 01:42:33 -> [SYS] Rcon error: Incorrect login for Rcon. Rcon has to be terminated.
+21/12/2014 01:46:32 -> [SYS] System Loading
+21/12/2014 01:46:32 -> [SYS] Loading Configuration
+21/12/2014 01:46:32 -> [SYS] Loaded and Ready
+21/12/2014 01:47:29 -> [SYS] Connecting to server 127.0.0.1 : 27015
+21/12/2014 01:47:29 -> [SYS] Connection initialised.
+21/12/2014 01:47:29 -> [SYS] Logging in...
+21/12/2014 01:47:29 -> [SYS] Rcon error: Incorrect login for Rcon. Rcon has to be terminated.
+21/12/2014 01:49:42 -> [SYS] Connecting to server 127.0.0.1 : 27015
+21/12/2014 01:49:42 -> [SYS] Connection initialised.
+21/12/2014 01:49:42 -> [SYS] Logging in...
+21/12/2014 01:49:42 -> [SYS] Successful Connection to 127.0.0.1
+21/12/2014 01:55:18 -> [SYS] Saving Configurarion
+21/12/2014 01:55:18 -> [SYS] fatal error on writing into stream
+21/12/2014 01:55:18 -> [SYS] Closing connection from 127.0.0.1 : 27015
+21/12/2014 11:41:19 -> [SYS] System Loading
+21/12/2014 11:41:19 -> [SYS] Loading Configuration
+21/12/2014 11:41:19 -> [SYS] Loaded and Ready
+21/12/2014 11:42:22 -> [SYS] System Loading
+21/12/2014 11:42:22 -> [SYS] Loading Configuration
+21/12/2014 11:42:22 -> [SYS] Loaded and Ready
+21/12/2014 11:51:04 -> [SYS] System Loading
+21/12/2014 11:51:04 -> [SYS] Loading Configuration
+21/12/2014 11:51:04 -> [SYS] Loaded and Ready
+06/04/2015 22:22:02 -> [SYS] System Loading
+06/04/2015 22:22:02 -> [SYS] Loading Configuration
+06/04/2015 22:22:02 -> [SYS] Loaded and Ready
+06/04/2015 22:24:37 -> [SYS] System Loading
+06/04/2015 22:24:37 -> [SYS] Loading Configuration
+06/04/2015 22:24:37 -> [SYS] Loaded and Ready
+06/04/2015 22:25:26 -> [SYS] System Loading
+06/04/2015 22:25:26 -> [SYS] Loading Configuration
+06/04/2015 22:25:26 -> [SYS] Loaded and Ready
+08/04/2015 21:40:06 -> [SYS] System Loading
+08/04/2015 21:40:06 -> [SYS] Loading Configuration
+08/04/2015 21:40:06 -> [SYS] Loaded and Ready
+08/04/2015 22:25:19 -> [SYS] System Loading
+08/04/2015 22:25:19 -> [SYS] Loading Configuration
+08/04/2015 22:25:19 -> [SYS] Loaded and Ready
+08/04/2015 22:26:14 -> [SYS] System Loading
+08/04/2015 22:26:14 -> [SYS] Loading Configuration
+08/04/2015 22:26:14 -> [SYS] Loaded and Ready
+08/04/2015 23:47:37 -> [SYS] System Loading
+08/04/2015 23:47:37 -> [SYS] Loading Configuration
+08/04/2015 23:47:37 -> [SYS] Loaded and Ready
+08/04/2015 23:51:58 -> [SYS] System Loading
+08/04/2015 23:51:58 -> [SYS] Loading Configuration
+08/04/2015 23:51:58 -> [SYS] Loaded and Ready
+09/04/2015 00:01:00 -> [SYS] System Loading
+09/04/2015 00:01:19 -> [SYS] System Loading
+09/04/2015 00:02:18 -> [SYS] System Loading
+09/04/2015 00:02:19 -> [SYS] Loading Configuration
+09/04/2015 00:02:19 -> [SYS] Loaded and Ready
+09/04/2015 00:02:48 -> [SYS] System Loading
+09/04/2015 00:02:48 -> [SYS] Loading Configuration
+09/04/2015 00:02:48 -> [SYS] Loaded and Ready
+09/04/2015 16:41:09 -> [SYS] System Loading
+09/04/2015 16:41:09 -> [SYS] Loading Configuration
+09/04/2015 16:41:09 -> [SYS] Loaded and Ready
+10/04/2015 22:34:08 -> [SYS] System Loading
+10/04/2015 22:34:08 -> [SYS] Loading Configuration
+10/04/2015 22:34:08 -> [SYS] Loaded and Ready
+11/04/2015 01:21:38 -> [SYS] System Loading
+11/04/2015 01:21:38 -> [SYS] Loading Configuration
+11/04/2015 01:21:38 -> [SYS] Loaded and Ready
+11/04/2015 01:21:55 -> [SYS] System Loading
+11/04/2015 01:21:55 -> [SYS] Loading Configuration
+11/04/2015 01:21:55 -> [SYS] Loaded and Ready
+11/04/2015 01:32:43 -> [SYS] System Loading
+11/04/2015 01:32:43 -> [SYS] Loading Configuration
+11/04/2015 01:32:43 -> [SYS] Loaded and Ready
+11/04/2015 01:32:49 -> [SYS] System Loading
+11/04/2015 01:32:49 -> [SYS] Loading Configuration
+11/04/2015 01:32:49 -> [SYS] Loaded and Ready
+11/04/2015 02:11:51 -> [SYS] System Loading
+11/04/2015 02:11:51 -> [SYS] Loading Configuration
+11/04/2015 02:11:51 -> [SYS] Loaded and Ready
+11/04/2015 02:13:12 -> [SYS] System Loading
+11/04/2015 02:13:12 -> [SYS] Loading Configuration
+11/04/2015 02:13:12 -> [SYS] Loaded and Ready
+11/04/2015 02:13:46 -> [SYS] System Loading
+11/04/2015 02:13:46 -> [SYS] Loading Configuration
+11/04/2015 02:13:46 -> [SYS] Loaded and Ready
+11/04/2015 02:33:02 -> [SYS] System Loading
+11/04/2015 02:33:02 -> [SYS] Loading Configuration
+11/04/2015 02:33:02 -> [SYS] Loaded and Ready
+11/04/2015 02:33:12 -> [SYS] System Loading
+11/04/2015 02:33:12 -> [SYS] Loading Configuration
+11/04/2015 02:33:12 -> [SYS] Loaded and Ready
+11/04/2015 02:33:20 -> [SYS] System Loading
+11/04/2015 02:33:20 -> [SYS] Loading Configuration
+11/04/2015 02:33:20 -> [SYS] Loaded and Ready
+11/04/2015 19:56:52 -> [SYS] System Loading
+11/04/2015 19:56:52 -> [SYS] Loading Configuration
+11/04/2015 19:56:52 -> [SYS] Loaded and Ready
+11/04/2015 19:57:16 -> [SYS] System Loading
+11/04/2015 19:57:16 -> [SYS] Loading Configuration
+11/04/2015 19:57:16 -> [SYS] Loaded and Ready
+11/04/2015 20:12:10 -> [SYS] System Loading
+11/04/2015 20:12:10 -> [SYS] Loading Configuration
+11/04/2015 20:12:10 -> [SYS] Loaded and Ready
+11/04/2015 20:28:07 -> [SYS] System Loading
+11/04/2015 20:28:14 -> [SYS] Loading Configuration
+11/04/2015 20:28:14 -> [SYS] Loaded and Ready
+12/04/2015 00:59:18 -> [SYS] System Loading
+12/04/2015 00:59:18 -> [SYS] Loading Configuration
+12/04/2015 00:59:18 -> [SYS] Loaded and Ready
+12/04/2015 01:00:06 -> [SYS] System Loading
+12/04/2015 01:00:06 -> [SYS] Loading Configuration
+12/04/2015 01:00:06 -> [SYS] Loaded and Ready
+12/04/2015 01:01:37 -> [SYS] System Loading
+12/04/2015 01:01:37 -> [SYS] Loading Configuration
+12/04/2015 01:01:37 -> [SYS] Loaded and Ready
+12/04/2015 01:03:58 -> [SYS] System Loading
+12/04/2015 01:03:58 -> [SYS] Loading Configuration
+12/04/2015 01:03:58 -> [SYS] Loaded and Ready
+12/04/2015 01:04:26 -> [SYS] System Loading
+12/04/2015 01:04:26 -> [SYS] Loading Configuration
+12/04/2015 01:04:26 -> [SYS] Loaded and Ready
+12/04/2015 01:05:07 -> [SYS] System Loading
+12/04/2015 01:05:07 -> [SYS] Loading Configuration
+12/04/2015 01:05:07 -> [SYS] Loaded and Ready
+12/04/2015 01:06:00 -> [SYS] System Loading
+12/04/2015 01:06:00 -> [SYS] Loading Configuration
+12/04/2015 01:06:00 -> [SYS] Loaded and Ready
+12/04/2015 01:06:42 -> [SYS] System Loading
+12/04/2015 01:06:42 -> [SYS] Loading Configuration
+12/04/2015 01:06:42 -> [SYS] Loaded and Ready
+12/04/2015 01:09:14 -> [SYS] System Loading
+12/04/2015 01:09:14 -> [SYS] Loading Configuration
+12/04/2015 01:09:14 -> [SYS] Loaded and Ready
+12/04/2015 01:11:36 -> [SYS] System Loading
+12/04/2015 01:11:36 -> [SYS] Loading Configuration
+12/04/2015 01:11:36 -> [SYS] Loaded and Ready
+12/04/2015 01:12:01 -> [SYS] System Loading
+12/04/2015 01:12:01 -> [SYS] Loading Configuration
+12/04/2015 01:12:01 -> [SYS] Loaded and Ready
+12/04/2015 01:12:35 -> [SYS] System Loading
+12/04/2015 01:12:35 -> [SYS] Loading Configuration
+12/04/2015 01:12:35 -> [SYS] Loaded and Ready
+12/04/2015 01:13:39 -> [SYS] System Loading
+12/04/2015 01:13:39 -> [SYS] Loading Configuration
+12/04/2015 01:13:39 -> [SYS] Loaded and Ready
+12/04/2015 01:42:17 -> [SYS] System Loading
+12/04/2015 01:42:17 -> [SYS] Loading Configuration
+12/04/2015 01:42:17 -> [SYS] Loaded and Ready
+12/04/2015 01:43:07 -> [SYS] System Loading
+12/04/2015 01:43:07 -> [SYS] Loading Configuration
+12/04/2015 01:43:07 -> [SYS] Loaded and Ready
+12/04/2015 01:44:11 -> [SYS] System Loading
+12/04/2015 01:44:11 -> [SYS] Loading Configuration
+12/04/2015 01:44:11 -> [SYS] Loaded and Ready
+12/04/2015 02:10:42 -> [SYS] System Loading
+12/04/2015 02:10:42 -> [SYS] Loading Configuration
+12/04/2015 02:10:42 -> [SYS] Loaded and Ready
+12/04/2015 02:18:08 -> [SYS] System Loading
+12/04/2015 02:18:08 -> [SYS] Loading Configuration
+12/04/2015 02:18:08 -> [SYS] Loaded and Ready
+12/04/2015 02:45:38 -> [SYS] System Loading
+12/04/2015 02:45:38 -> [SYS] Loading Configuration
+12/04/2015 02:45:38 -> [SYS] Loaded and Ready
+12/04/2015 02:48:04 -> [SYS] System Loading
+12/04/2015 02:48:04 -> [SYS] Loading Configuration
+12/04/2015 02:48:04 -> [SYS] Loaded and Ready
+12/04/2015 02:48:39 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 02:48:40 -> [SYS] Connection initialised.
+12/04/2015 02:48:40 -> [SYS] Logging in...
+12/04/2015 02:48:40 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 02:49:33 -> [RAS] Match started
+12/04/2015 02:49:33 -> 
+12/04/2015 02:49:34 -> [RAS] Match started
+12/04/2015 02:49:34 -> 
+12/04/2015 02:50:12 -> [SYS] A socket is already connected.
+12/04/2015 02:51:07 -> [SYS] Saving Configurarion
+12/04/2015 02:51:07 -> [SYS] Closing connection from 127.0.0.1 : 27015
+12/04/2015 02:51:07 -> [SYS] Closing Application!
+12/04/2015 03:01:39 -> [SYS] System Loading
+12/04/2015 03:01:39 -> [SYS] Loading Configuration
+12/04/2015 03:01:39 -> [SYS] Loaded and Ready
+12/04/2015 03:01:54 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 03:01:54 -> [SYS] Connection initialised.
+12/04/2015 03:01:54 -> [SYS] Logging in...
+12/04/2015 03:01:54 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 03:01:55 -> [RAS] Match started
+12/04/2015 03:01:55 -> 
+12/04/2015 03:02:01 -> [SYS] Saving Configurarion
+12/04/2015 03:02:01 -> [SYS] Closing connection from 127.0.0.1 : 27015
+12/04/2015 03:02:01 -> [SYS] Closing Application!
+12/04/2015 03:08:42 -> [SYS] System Loading
+12/04/2015 03:08:42 -> [SYS] Loading Configuration
+12/04/2015 03:08:42 -> [SYS] Loaded and Ready
+12/04/2015 03:09:11 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 03:09:11 -> [SYS] Connection initialised.
+12/04/2015 03:09:11 -> [SYS] Logging in...
+12/04/2015 03:09:11 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 03:11:13 -> [SYS] System Loading
+12/04/2015 03:11:13 -> [SYS] Loading Configuration
+12/04/2015 03:11:13 -> [SYS] Loaded and Ready
+12/04/2015 14:24:35 -> [SYS] System Loading
+12/04/2015 14:24:35 -> [SYS] Loading Configuration
+12/04/2015 14:24:35 -> [SYS] Loaded and Ready
+12/04/2015 14:24:50 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 14:24:51 -> [SYS] Fatal Error tring the connection from 127.0.0.1 : 27015
+12/04/2015 16:24:41 -> [SYS] System Loading
+12/04/2015 16:24:41 -> [SYS] Loading Configuration
+12/04/2015 16:24:41 -> [SYS] Loaded and Ready
+12/04/2015 16:25:44 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 16:25:44 -> [SYS] Connection initialised.
+12/04/2015 16:25:44 -> [SYS] Logging in...
+12/04/2015 16:25:45 -> [SYS] Rcon error: Incorrect login for Rcon. Rcon has to be terminated.
+12/04/2015 16:26:03 -> [SYS] fatal error on writing into stream
+12/04/2015 16:26:03 -> [SYS] Closing connection from 127.0.0.1 : 27015
+12/04/2015 16:29:47 -> [SYS] System Loading
+12/04/2015 16:29:47 -> [SYS] Loading Configuration
+12/04/2015 16:29:47 -> [SYS] Loaded and Ready
+12/04/2015 16:30:06 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 16:30:06 -> [SYS] Connection initialised.
+12/04/2015 16:30:06 -> [SYS] Logging in...
+12/04/2015 16:30:07 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 16:30:52 -> [SYS] A socket is already connected.
+12/04/2015 16:31:32 -> [SYS] Saving Configurarion
+12/04/2015 16:34:24 -> [SYS] System Loading
+12/04/2015 16:34:24 -> [SYS] Loading Configuration
+12/04/2015 16:34:24 -> [SYS] Loaded and Ready
+12/04/2015 16:34:38 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 16:34:38 -> [SYS] Connection initialised.
+12/04/2015 16:34:38 -> [SYS] Logging in...
+12/04/2015 16:34:39 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 16:35:14 -> [SYS] Saving Configurarion
+12/04/2015 16:36:32 -> [SYS] System Loading
+12/04/2015 16:36:32 -> [SYS] Loading Configuration
+12/04/2015 16:36:32 -> [SYS] Loaded and Ready
+12/04/2015 16:36:43 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 16:36:43 -> [SYS] Connection initialised.
+12/04/2015 16:36:43 -> [SYS] Logging in...
+12/04/2015 16:36:43 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 16:36:51 -> [SYS] Saving Configurarion
+12/04/2015 16:38:16 -> [SYS] System Loading
+12/04/2015 16:38:16 -> [SYS] Loading Configuration
+12/04/2015 16:38:16 -> [SYS] Loaded and Ready
+12/04/2015 16:38:27 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 16:38:27 -> [SYS] Connection initialised.
+12/04/2015 16:38:27 -> [SYS] Logging in...
+12/04/2015 16:38:28 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 16:38:41 -> [SYS] Saving Configurarion
+12/04/2015 16:40:22 -> [SYS] System Loading
+12/04/2015 16:40:23 -> [SYS] Loading Configuration
+12/04/2015 16:40:23 -> [SYS] Loaded and Ready
+12/04/2015 16:42:22 -> [SYS] System Loading
+12/04/2015 16:42:22 -> [SYS] Loading Configuration
+12/04/2015 16:42:22 -> [SYS] Loaded and Ready
+12/04/2015 16:44:11 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 16:44:11 -> [SYS] Connection initialised.
+12/04/2015 16:44:11 -> [SYS] Logging in...
+12/04/2015 16:44:11 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 16:49:21 -> [SYS] A socket is already connected.
+12/04/2015 16:51:59 -> [SYS] System Loading
+12/04/2015 16:51:59 -> [SYS] Loading Configuration
+12/04/2015 16:51:59 -> [SYS] Loaded and Ready
+12/04/2015 16:52:29 -> [SYS] System Loading
+12/04/2015 16:52:29 -> [SYS] Loading Configuration
+12/04/2015 16:52:29 -> [SYS] Loaded and Ready
+12/04/2015 16:52:55 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 16:52:55 -> [SYS] Connection initialised.
+12/04/2015 16:52:55 -> [SYS] Logging in...
+12/04/2015 16:52:55 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 16:54:05 -> [SYS] Connecting to server 127.0.0.1 : 27020
+12/04/2015 16:54:15 -> [SYS] Connection initialised.
+12/04/2015 16:54:17 -> [SYS] Logging in...
+12/04/2015 16:55:15 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 16:57:56 -> [SYS] fatal error on writing into stream
+12/04/2015 16:57:56 -> [SYS] Closing connection from 127.0.0.1 : 27015
+12/04/2015 16:57:58 -> [SYS] Saving Configurarion
+12/04/2015 16:58:38 -> [SYS] System Loading
+12/04/2015 16:58:38 -> [SYS] Loading Configuration
+12/04/2015 16:58:38 -> [SYS] Loaded and Ready
+12/04/2015 16:58:57 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 16:58:57 -> [SYS] Connection initialised.
+12/04/2015 16:58:57 -> [SYS] Logging in...
+12/04/2015 16:58:57 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 17:06:17 -> [SYS] System Loading
+12/04/2015 17:06:17 -> [SYS] Loading Configuration
+12/04/2015 17:06:17 -> [SYS] Loaded and Ready
+12/04/2015 17:06:34 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 17:06:34 -> [SYS] Connection initialised.
+12/04/2015 17:06:34 -> [SYS] Logging in...
+12/04/2015 17:06:34 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 17:08:34 -> [SYS] Connecting to server 127.0.0.1 : 27020
+12/04/2015 17:08:34 -> [SYS] Connection initialised.
+12/04/2015 17:08:34 -> [SYS] Logging in...
+12/04/2015 17:08:34 -> [SYS] Rcon error: Incorrect login for Rcon. Rcon has to be terminated.
+12/04/2015 17:08:40 -> [SYS] fatal error on writing into stream
+12/04/2015 17:08:40 -> [SYS] Closing connection from 127.0.0.1 : 27020
+12/04/2015 17:08:43 -> [SYS] Saving Configurarion
+12/04/2015 17:40:08 -> [SYS] System Loading
+12/04/2015 17:40:08 -> [SYS] Loading Configuration
+12/04/2015 17:40:08 -> [SYS] Loaded and Ready
+12/04/2015 17:40:27 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 17:40:27 -> [SYS] Connection initialised.
+12/04/2015 17:40:27 -> [SYS] Logging in...
+12/04/2015 17:40:27 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 17:44:09 -> [SYS] System Loading
+12/04/2015 17:44:09 -> [SYS] Loading Configuration
+12/04/2015 17:44:09 -> [SYS] Loaded and Ready
+12/04/2015 17:44:23 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 17:44:23 -> [SYS] Connection initialised.
+12/04/2015 17:44:23 -> [SYS] Logging in...
+12/04/2015 17:44:23 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 17:44:59 -> [SYS] Connecting to server 127.0.0.1 : 27020
+12/04/2015 17:44:59 -> [SYS] Connection initialised.
+12/04/2015 17:44:59 -> [SYS] Logging in...
+12/04/2015 17:44:59 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 17:46:00 -> [SYS] Saving Configurarion
+12/04/2015 17:47:35 -> [SYS] System Loading
+12/04/2015 17:47:35 -> [SYS] Loading Configuration
+12/04/2015 17:47:35 -> [SYS] Loaded and Ready
+12/04/2015 17:48:08 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 17:48:08 -> [SYS] Connection initialised.
+12/04/2015 17:48:08 -> [SYS] Logging in...
+12/04/2015 17:48:08 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 18:00:45 -> [SYS] Connecting to server 127.0.0.1 : 27020
+12/04/2015 18:00:45 -> [SYS] Connection initialised.
+12/04/2015 18:00:45 -> [SYS] Logging in...
+12/04/2015 18:00:45 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 18:07:43 -> [SYS] Saving Configurarion
+12/04/2015 18:07:50 -> [SYS] System Loading
+12/04/2015 18:07:50 -> [SYS] Loading Configuration
+12/04/2015 18:07:50 -> [SYS] Loaded and Ready
+12/04/2015 18:08:19 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 18:08:19 -> [SYS] Connection initialised.
+12/04/2015 18:08:19 -> [SYS] Logging in...
+12/04/2015 18:08:19 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 18:08:51 -> [SYS] Connecting to server 127.0.0.1 : 27020
+12/04/2015 18:08:51 -> [SYS] Connection initialised.
+12/04/2015 18:08:51 -> [SYS] Logging in...
+12/04/2015 18:08:51 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 18:09:43 -> [SYS] Saving Configurarion
+12/04/2015 18:25:26 -> [SYS] System Loading
+12/04/2015 18:25:26 -> [SYS] Loading Configuration
+12/04/2015 18:25:26 -> [SYS] Loaded and Ready
+12/04/2015 18:25:32 -> [SYS] Saving Configurarion
+12/04/2015 18:27:46 -> [SYS] System Loading
+12/04/2015 18:27:46 -> [SYS] Loading Configuration
+12/04/2015 18:27:46 -> [SYS] Loaded and Ready
+12/04/2015 18:27:59 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 18:28:00 -> [SYS] Fatal Error tring the connection from 127.0.0.1 : 27015
+12/04/2015 18:28:19 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 18:28:19 -> [SYS] Connection initialised.
+12/04/2015 18:28:19 -> [SYS] Logging in...
+12/04/2015 18:28:19 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 18:28:40 -> [SYS] Connecting to server 127.0.0.1 : 27020
+12/04/2015 18:28:40 -> [SYS] Connection initialised.
+12/04/2015 18:28:40 -> [SYS] Logging in...
+12/04/2015 18:28:40 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 18:29:19 -> [SYS] Saving Configurarion
+12/04/2015 18:40:24 -> [SYS] System Loading
+12/04/2015 18:40:24 -> [SYS] Loading Configuration
+12/04/2015 18:40:24 -> [SYS] Loaded and Ready
+12/04/2015 18:40:32 -> [SYS] Saving Configurarion
+12/04/2015 18:41:41 -> [SYS] System Loading
+12/04/2015 18:41:41 -> [SYS] Loading Configuration
+12/04/2015 18:41:41 -> [SYS] Loaded and Ready
+12/04/2015 18:41:54 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 18:41:55 -> [SYS] Connection initialised.
+12/04/2015 18:41:55 -> [SYS] Logging in...
+12/04/2015 18:41:55 -> [SYS] Successful Connection to 127.0.0.1
+12/04/2015 21:46:13 -> [SYS] System Loading
+12/04/2015 21:46:13 -> [SYS] Loading Configuration
+12/04/2015 21:46:13 -> [SYS] Loaded and Ready
+12/04/2015 21:46:30 -> [SYS] Connecting to server 127.0.0.1 : 27015
+12/04/2015 21:46:30 -> [SYS] Connection initialised.
+12/04/2015 21:46:30 -> [SYS] Logging in...
+12/04/2015 21:46:30 -> [SYS] Successful Connection to 127.0.0.1
+25/04/2015 19:28:57 -> [SYS] System Loading
+25/04/2015 19:29:36 -> [SYS] System Loading
+25/04/2015 19:29:36 -> [SYS] Loading Configuration
+25/04/2015 19:29:36 -> [SYS] Loaded and Ready
+25/04/2015 19:30:23 -> [SYS] Connecting to server 127.0.0.1 : 27015
+25/04/2015 19:30:24 -> [SYS] Fatal Error tring the connection from 127.0.0.1 : 27015
+25/04/2015 19:30:58 -> [SYS] Connecting to server 127.0.0.1 : 27015
+25/04/2015 19:30:58 -> [SYS] Connection initialised.
+25/04/2015 19:30:58 -> [SYS] Logging in...
+25/04/2015 19:30:58 -> [SYS] Successful Connection to 127.0.0.1
+25/04/2015 19:31:07 -> [SYS] fatal error on writing into stream
+25/04/2015 19:31:07 -> [SYS] Closing connection from 127.0.0.1 : 27015
+25/04/2015 19:32:46 -> [SYS] System Loading
+25/04/2015 19:32:46 -> [SYS] Loading Configuration
+25/04/2015 19:32:46 -> [SYS] Loaded and Ready
+25/04/2015 19:32:59 -> [SYS] Connecting to server 3424 : 24443
+25/04/2015 19:32:59 -> [SYS] Fatal Error tring the connection from 3424 : 24443
+25/04/2015 19:33:05 -> [SYS] fatal error on writing into stream
+25/04/2015 19:33:07 -> [SYS] Saving Configurarion
+25/04/2015 19:33:53 -> [SYS] System Loading
+25/04/2015 19:33:53 -> [SYS] Loading Configuration
+25/04/2015 19:33:53 -> [SYS] Loaded and Ready
+25/04/2015 19:34:00 -> [SYS] Connecting to server 435 : 3453453
+25/04/2015 19:34:00 -> [SYS] Fatal Error tring the connection from 435 : 3453453
+25/04/2015 19:34:04 -> [SYS] fatal error on writing into stream
+25/04/2015 21:17:33 -> [SYS] System Loading
+25/04/2015 21:17:33 -> [SYS] Loading Configuration
+25/04/2015 21:17:33 -> [SYS] Loaded and Ready
+25/04/2015 21:17:53 -> [SYS] Connecting to server 127.0.0.1 : 27015
+25/04/2015 21:17:54 -> [SYS] Connection initialised.
+25/04/2015 21:17:54 -> [SYS] Logging in...
+25/04/2015 21:17:54 -> [SYS] Successful Connection to 127.0.0.1
+25/04/2015 21:18:29 -> [SYS] Saving Configurarion
+25/04/2015 21:23:25 -> [SYS] System Loading
+25/04/2015 21:23:25 -> [SYS] Loading Configuration
+25/04/2015 21:23:25 -> [SYS] Loaded and Ready
+25/04/2015 21:23:42 -> [SYS] Connecting to server 54353 : 543
+25/04/2015 21:23:42 -> [SYS] Fatal Error tring the connection from 54353 : 543
+25/04/2015 21:24:06 -> [SYS] Connecting to server 127.0.0.1 : 27015
+25/04/2015 21:24:06 -> [SYS] Connection initialised.
+25/04/2015 21:24:06 -> [SYS] Logging in...
+25/04/2015 21:24:07 -> [SYS] Successful Connection to 127.0.0.1
+25/04/2015 21:24:43 -> [SYS] Saving Configurarion
+25/04/2015 21:42:07 -> [SYS] System Loading
+25/04/2015 21:42:07 -> [SYS] Loading Configuration
+25/04/2015 21:42:07 -> [SYS] Loaded and Ready
+25/04/2015 21:42:11 -> [SYS] Saving Configurarion

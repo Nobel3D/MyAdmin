@@ -11,6 +11,7 @@ Players::Players()
 Players::Players(String^ ID, int SamIndex)
 {
 	str_ID = ID;
+	str_Name = "Spectator " + SamIndex;
 	Sam = SamIndex;
 	Initialize = true;
 	JoinGame = false;
@@ -100,7 +101,7 @@ void Players::Iwin()
 	all_Point += 20;
 }
 
-void Players::Weloser(array<Players^>^ MyPlayers)
+void Players::Weloser(List<Players^>^ MyPlayers)
 {
 	for (int i = 0; i<Index; i++)
 	{
@@ -155,7 +156,7 @@ Players^ Players::Load(System::String^ ID, System::String^ Name, int SamIndex)
 }
 
 
-int Players::WinnerIndex(cli::array<Players^>^ MyPlayers)
+int Players::WinnerIndex(List<Players^>^ MyPlayers)
 {
 	try
 	{
@@ -163,7 +164,7 @@ int Players::WinnerIndex(cli::array<Players^>^ MyPlayers)
 		Players^ a = gcnew Players("","",-1);
 		int nn;
 		a->this_Kill = 0;
-		for (int i = 0; i<MAXPLAYERSUPPORT; i++)
+		for (int i = 0; i<MyPlayers->Count; i++)
 		{
 			if (MyPlayers[i]->JoinGame == true)
 			{
@@ -180,16 +181,16 @@ int Players::WinnerIndex(cli::array<Players^>^ MyPlayers)
 	catch (Exception^ io){}
 }
 
-void Players::cleanAll(cli::array<Players^>^ MyPlayers)
+void Players::cleanAll(List<Players^>^ MyPlayers)
 {
-	for (int i = 0; i<MAXPLAYERSUPPORT; i++)
+	for (int i = 0; i<MyPlayers->Count; i++)
 		MyPlayers[i]->Clean();
 }
 
-int Players::FindIndex(cli::array<Players^>^ MyPlayers, String^ ID)
+int Players::FindIndex(List<Players^>^ MyPlayers, String^ ID)
 {
 	int a = -1;
-	for (int i = 0; i<MAXPLAYERSUPPORT; i++)
+	for (int i = 0; i<MyPlayers->Count; i++)
 	{
 		if (MyPlayers[i]->Initialize==true)
 		if (MyPlayers[i]->getID() == ID)
@@ -198,18 +199,18 @@ int Players::FindIndex(cli::array<Players^>^ MyPlayers, String^ ID)
 	return a;
 }
 
-int Players::FreeIndex(cli::array<Players^>^ MyPlayers)
+int Players::FreeIndex(List<Players^>^ MyPlayers)
 {
-	for (int i = 0; i<MAXPLAYERSUPPORT; i++)
+	for (int i = 0; i<MyPlayers->Count; i++)
 	{
 		if (MyPlayers[i]->Initialize == false)
 			return i;
 	}
 }
 
-int Players::FragLimit(cli::array<Players^>^ MyPlayers, int Limits)
+int Players::FragLimit(List<Players^>^ MyPlayers, int Limits)
 {
-	for (int i = 0; i<MAXPLAYERSUPPORT; i++)
+	for (int i = 0; i<MyPlayers->Count; i++)
 	{
 		if (MyPlayers[i]->JoinGame==true)
 		if (MyPlayers[i]->this_Kill >= Limits)
@@ -220,10 +221,10 @@ int Players::FragLimit(cli::array<Players^>^ MyPlayers, int Limits)
 	return -1;
 }
 
-Players^ Players::betterPlayer(cli::array<Players^>^ MyPlayers)
+Players^ Players::betterPlayer(List<Players^>^ MyPlayers)
 {
 	Players^ ab;
-	for (int i = 0; i<MAXPLAYERSUPPORT; i++)
+	for (int i = 0; i<MyPlayers->Count; i++)
 	{
 		if (MyPlayers[i]->JoinGame==true)
 		if (MyPlayers[i]->this_Kill >= ab->this_Kill)
@@ -232,10 +233,10 @@ Players^ Players::betterPlayer(cli::array<Players^>^ MyPlayers)
 	return ab;
 }
 
-bool Players::AlreadyStarted(cli::array<Players^>^ MyPlayers, String^ Ask)
+bool Players::AlreadyStarted(List<Players^>^ MyPlayers, String^ Ask)
 {
 	bool result = false;
-	for (int i = 0; i < MAXPLAYERSUPPORT; i++)
+	for (int i = 0; i < MyPlayers->Count; i++)
 	{
 		if (MyPlayers[i]->JoinGame == true)
 		if (MyPlayers[i]->getID() == Ask)
@@ -244,9 +245,9 @@ bool Players::AlreadyStarted(cli::array<Players^>^ MyPlayers, String^ Ask)
 	return result;
 
 }
-void Players::SaveAll(cli::array<Players^>^ MyPlayers)
+void Players::SaveAll(List<Players^>^ MyPlayers)
 {
-	for (int i = 0; i < MyPlayers->Length; i++)
+	for (int i = 0; i < MyPlayers->Count; i++)
 	{
 		if (MyPlayers[i]->JoinGame)
 			MyPlayers[i]->Save();

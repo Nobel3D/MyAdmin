@@ -36,6 +36,12 @@
     <ClCompile Include="Form\YouKnow.cpp">
       <Filter>Form</Filter>
     </ClCompile>
+    <ClCompile Include="Class\Host.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\ServerPage.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Class\Database.h">
@@ -62,6 +68,12 @@
     <ClInclude Include="Form\YouKnow.h">
       <Filter>Form</Filter>
     </ClInclude>
+    <ClInclude Include="Class\Host.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\ServerPage.h">
+      <Filter>Class</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resource\app.ico" />
@@ -69,6 +81,9 @@
     <Image Include="Resource\Smart Sam.png" />
     <Image Include="Resource\Credits Sam Logo.png" />
     <Image Include="Resource\MyDedicated.ico" />
+    <Image Include="green.Image.bmp" />
+    <Image Include="Resource\Verde.png" />
+    <Image Include="Resource\Giallo.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Credits.resx" />

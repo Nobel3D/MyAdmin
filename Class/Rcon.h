@@ -8,7 +8,7 @@ ref class Rcon
 private:
 
 	/*Connection is stated?*/
-	static bool RconConnected;
+	bool RconConnected = false;
 	/*Ignore something*/
 	bool ignoredFirst;
 
@@ -23,7 +23,7 @@ private:
 	/*.NET Client connection*/
 	Net::Sockets::TcpClient^ Client;
 	/*DataStream*/
-	static Net::Sockets::NetworkStream^ iStream;
+	Net::Sockets::NetworkStream^ iStream;
 	/*Stream Reader*/
 	IO::StreamReader^ iReader;
 
@@ -45,14 +45,17 @@ public:
 	String^ getLine();
 	/*For Serious Sam chatSay method*/
 	void SamChat(String^ Message);
+	/*Add log in the netlog.txt*/
+	void addLog(String^ Log);
 
 	/*convert String to Byte, it used on send data*/
 	static array<Byte>^ convertStrToByte(String^ Str);
-	/*Add log in the log.txt*/
-	static void addLog(String^ Log);
+	static void addLog2(String^ Log);
+	static String^ markupDecode(String^ strText);
+	static String^ markupEncode(String^ strText);
 
 
-	static bool getOnline();
+	bool getOnline();
 	String^ getIPServer();
 	String^ getStatus();
 	int getPortServer();

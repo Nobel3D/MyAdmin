@@ -38,7 +38,7 @@ namespace MyAdmin {
 			label3->Visible = false;
 		}
 		/*Ban anyone player for this time*/
-		SupportForm(array<Players^>^ Ban, int AddMonth, int AddDays, int AddHours, int AddMinute)
+/*		SupportForm(array<Players^>^ Ban, int AddMonth, int AddDays, int AddHours, int AddMinute)
 		{
 			InitializeComponent();
 			this->Text = "Ban a player";
@@ -105,6 +105,7 @@ namespace MyAdmin {
 			}
 
 		}
+		*/
 		/*Unban anyone ID*/
 		SupportForm(String^ Unban)
 		{
@@ -301,7 +302,7 @@ namespace MyAdmin {
 				 // 
 				 this->textBoxSuicide->Location = System::Drawing::Point(10, 117);
 				 this->textBoxSuicide->Name = L"textBoxSuicide";
-				 this->textBoxSuicide->Size = System::Drawing::Size(451, 20);
+				 this->textBoxSuicide->Size = System::Drawing::Size(453, 20);
 				 this->textBoxSuicide->TabIndex = 14;
 				 // 
 				 // label3
@@ -364,7 +365,7 @@ namespace MyAdmin {
 
 						 MySignature = gcnew String(SafeCheck);
 						 MySignature = textBoxText->Text;
-						 Rcon::addLog("[NSF] SignatureChanged: " + MySignature);
+						 Rcon::addLog2("[NSF] SignatureChanged: " + MySignature);
 					 }
 					 else
 						 MessageBox::Show("Too short", "ERROR 05", MessageBoxButtons::OK, MessageBoxIcon::Error);
@@ -373,20 +374,20 @@ namespace MyAdmin {
 				 {
 					 MyMessage = textBoxText->Text;
 					 MyMinute = Convert::ToInt32(numericMinute->Text);
-					 Rcon::addLog("[NSF] TimedMessageChanged: " + MyMessage + "; Time: " + MyMinute);
+					 Rcon::addLog2("[NSF] TimedMessageChanged: " + MyMessage + "; Time: " + MyMinute);
 				 }
 				 if (TypeForm == "BAN")
 				 {
 					 DateTime^ TimeBan = DateTime::Now;
 					 IndexBan = comboBoxBan->SelectedIndex;
 					 Taker[IndexBan]->Ban(StringBan);
-					 Rcon::addLog("[NSB] PlayerBanned: " + Taker[IndexBan]->getName() + "; IDBanned: " + Taker[IndexBan]->getID());
+					 Rcon::addLog2("[NSB] PlayerBanned: " + Taker[IndexBan]->getName() + "; IDBanned: " + Taker[IndexBan]->getID());
 
 				 }
 				 if (TypeForm == "UNBAN")
 				 {
 					 Players::Unban(Line[comboBoxBan->SelectedIndex][0]);
-					 Rcon::addLog("[NSB] IDUnBanned: " + Line[comboBoxBan->SelectedIndex][0]);
+					 Rcon::addLog2("[NSB] IDUnBanned: " + Line[comboBoxBan->SelectedIndex][0]);
 				 }
 				 if (TypeForm == "KILLMESSAGE")
 				 {

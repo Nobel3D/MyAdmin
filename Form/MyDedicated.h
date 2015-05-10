@@ -18,6 +18,7 @@ namespace MyAdmin {
 		int getPort() { return PortValue; }
 		String^ getPassword() { return Password; }
 		String^ getDedicatedPath() { return Exe; }
+		String^ getName() { return Name; }
 
 		/*Change status*/
 		System::Void changeClick(Windows::Forms::ToolStripMenuItem^ CLICK)
@@ -242,8 +243,6 @@ namespace MyAdmin {
 			if (checkBox1->Checked)
 			{
 				String^ PathScript = Exe->Replace("Bin\\SamHD_TSE_DedicatedServer.exe", "Content\\SeriousSamHD_TSE\\SGUIHD.lua");
-				if (!IO::File::Exists(PathScript)) //Message Script
-				{
 					IO::StreamWriter^ LuaScript = gcnew IO::StreamWriter(PathScript, false);
 					LuaScript->Write("Wait(Delay(60));" + "\n" +
 						"globals.interChat = function()" + "\n" +
@@ -253,7 +252,7 @@ namespace MyAdmin {
 						"end" + "\n"
 						"globals.interChat();" + "\n" + "\n");
 					LuaScript->Close();
-				}
+				
 				Args += " +exec \"Content/SeriousSamHD_TSE/SGUIHD.lua\"";
 			}
 		}
@@ -282,6 +281,7 @@ namespace MyAdmin {
 	private: static int CountServer = 1;
 	private: int PortValue;
 	private: String^ Password;
+	private: String^ Name;
 	private: bool Exited;
 	private: String^ Exe;
 	private: String^ Args;
@@ -1213,6 +1213,7 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 				 {
 					 PortValue = Convert::ToInt32(textBoxPort->Text);
 					 Password = textBoxPassword->Text;
+					 Name = textBoxName->Text;
 					 textBoxStatus->Text = "Started!";
 					 timeScript();
 					 System::Diagnostics::Process::Start(Exe, Args);
@@ -1235,7 +1236,7 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 					 {
 
 						 Exe = openFile->FileName;
-
+						 Name = textBoxName->Text;
 						 PortValue = Convert::ToInt32(textBoxPort->Text);
 						 Password = textBoxPassword->Text;
 						 textBoxStatus->Text = "Started!";

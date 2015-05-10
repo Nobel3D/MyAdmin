@@ -35,6 +35,7 @@ Class MyAdmin.MyDedicated: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     getPort(): PrivateScope, Public, HideBySig
     getPassword(): PrivateScope, Public, HideBySig
     getDedicatedPath(): PrivateScope, Public, HideBySig
+    getName(): PrivateScope, Public, HideBySig
     changeClick(ToolStripMenuItem): PrivateScope, Public, HideBySig
     setLevels(ComboBox, Int32): PrivateScope, Public, HideBySig
     getLevels(Int32): PrivateScope, Public, HideBySig
@@ -44,7 +45,6 @@ Class MyAdmin.SupportForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Rcon): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-    Void .ctor(Players[], Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:

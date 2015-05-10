@@ -75,8 +75,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Class\Database.cpp" />
+    <ClCompile Include="Class\Host.cpp" />
     <ClCompile Include="Class\Players.cpp" />
     <ClCompile Include="Class\Rcon.cpp" />
+    <ClCompile Include="Class\ServerPage.cpp" />
     <ClCompile Include="Form\Credits.cpp" />
     <ClCompile Include="Form\MainForm.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
@@ -100,8 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Class\Database.h" />
+    <ClInclude Include="Class\Host.h" />
     <ClInclude Include="Class\Players.h" />
     <ClInclude Include="Class\Rcon.h" />
+    <ClInclude Include="Class\ServerPage.h" />
     <ClInclude Include="Form\Credits.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -159,11 +163,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="green.Image.bmp" />
     <Image Include="Resource\app.ico" />
     <Image Include="Resource\Credits Sam Logo.png" />
+    <Image Include="Resource\Giallo.png" />
     <Image Include="Resource\MyDedicated.ico" />
     <Image Include="Resource\Serious Sam Logo.png" />
     <Image Include="Resource\Smart Sam.png" />
+    <Image Include="Resource\Verde.png" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />

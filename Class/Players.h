@@ -84,23 +84,23 @@ public:
 	static String^ markupCode(String^ ID);
 
 	/*They have a so bad score*/
-	static void Weloser(array<Players^>^ MyPlayers);
+	static void Weloser(List<Players^>^ MyPlayers);
 	/*The index of the winner on the match*/
-	static int WinnerIndex(array<Players^>^ MyPlayers);
+	static int WinnerIndex(List<Players^>^ MyPlayers);
 	/*Clean all player*/
-	static void cleanAll(array<Players^>^ MyPlayers);
+	static void cleanAll(List<Players^>^ MyPlayers);
 	/*Find the index of this string ID*/
-	static int FindIndex(array<Players^>^ MyPlayers, String^ ID);
+	static int FindIndex(List<Players^>^ MyPlayers, String^ ID);
 	/*Find the first free index -> this is useless, because already Sam manage it*/
-	static int FreeIndex(array<Players^>^ MyPlayers);
+	static int FreeIndex(List<Players^>^ MyPlayers);
 	/*Anyone have gotten the win? never used, lol*/
-	static int FragLimit(array<Players^>^ MyPlayers, int Limits);
+	static int FragLimit(List<Players^>^ MyPlayers, int Limits);
 	/*The player is already joined in the game?*/
-	static bool AlreadyStarted(array<Players^>^ MyPlayers, String^ Ask);
+	static bool AlreadyStarted(List<Players^>^ MyPlayers, String^ Ask);
 	/*Who is the better player?*/
-	static Players^ betterPlayer(array<Players^>^ MyPlayer);
+	static Players^ betterPlayer(List<Players^>^ MyPlayer);
 	/*Save all stats about players*/
-	static void SaveAll(array<Players^>^ MyPlayers);
+	static void SaveAll(List<Players^>^ MyPlayers);
 
 	String^ getID();
 	String^ getName();
