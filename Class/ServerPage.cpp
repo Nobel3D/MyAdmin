@@ -3,12 +3,15 @@
 
 using namespace System;
 using namespace System::Windows::Forms;
+using namespace System::Diagnostics;
 
-ServerPage::ServerPage(Rcon^ netConnection, TabControl^ controlTab)
+ServerPage::ServerPage(Rcon^ netConnection, String^ args, TabControl^ controlTab)
 {
 	mainControl = controlTab;
 	netDedicated = netConnection;
+	netArgs = args;
 	listPlayer = gcnew List < Players^ > ;
+	idPage++;
 }
 
 ServerPage::~ServerPage()
@@ -16,12 +19,8 @@ ServerPage::~ServerPage()
 	this->thisTab->Controls->Clear();
 	this->thisTab->Hide();
 	this->mainControl->TabPages->Remove(thisTab);
-	thisThread->Abort();
-	if (netDedicated!=nullptr)
-	{
-		netDedicated->sendData("chatSay(\"Log: Closing terminal of MyAdmin!\")");
-		netDedicated->~Rcon();
-	}
+	deThread->Abort();
+	netDedicated->~Rcon();
 }
 TabPage^ ServerPage::getPage(String^ netName, System::ComponentModel::ComponentResourceManager^  resources)
 {
@@ -42,6 +41,7 @@ TabPage^ ServerPage::getPage(String^ netName, System::ComponentModel::ComponentR
 	btnKick = addKick();
 	btnFail = addFail();
 	btnPass = addPass();
+	btnHost = addHost();
 	thisTab = gcnew TabPage();
 	thisTab->Controls->Add(labelMain);
 	thisTab->Controls->Add(immPicture);
@@ -60,6 +60,7 @@ TabPage^ ServerPage::getPage(String^ netName, System::ComponentModel::ComponentR
 	thisTab->Controls->Add(btnKick);
 	thisTab->Controls->Add(btnFail);
 	thisTab->Controls->Add(btnPass);
+	thisTab->Controls->Add(btnHost);
 	thisTab->Location = System::Drawing::Point(4, 4);
 	thisTab->Name = L"thisTab";
 	thisTab->Padding = System::Windows::Forms::Padding(3);
@@ -292,6 +293,19 @@ Button^ ServerPage::addButtonRcon()
 
 	return buttonRcon;
 }
+Button^ ServerPage::addHost()
+{
+	Button^ buttonHost = gcnew Button();
+	buttonHost->Location = System::Drawing::Point(323, 18);
+	buttonHost->Name = L"buttonHost";
+	buttonHost->Size = System::Drawing::Size(141, 36);
+	buttonHost->TabIndex = 24;
+	buttonHost->Text = L"Create Host";
+	buttonHost->UseVisualStyleBackColor = true;
+	buttonHost->Click += gcnew System::EventHandler(this, &ServerPage::startHost);
+
+	return buttonHost;
+}
 
 PictureBox^ ServerPage::addPicture(System::ComponentModel::ComponentResourceManager^  resources)
 {
@@ -308,14 +322,33 @@ PictureBox^ ServerPage::addPicture(System::ComponentModel::ComponentResourceMana
 }
 
 #pragma endregion
-
+bool ServerPage::sendData(String^ data)
+{
+	if (netLocal)
+	{
+		return netDedicated->sendData(data);
+	}
+	else
+	{
+		try
+		{
+			int nByte = data->Length;
+			netStream->Write(Rcon::convertStrToByte(data), 0, nByte + 1);
+		}
+		catch (Exception^ io)
+		{
+			return false;
+		}
+		return true;
+	}
+}
 System::Void ServerPage::sendServer(String^ toServer)
 {
 	DialogResult^ messageReturn;
 
 	do
 	{
-		if (!netDedicated->sendData(toServer))
+		if (sendData(toServer))
 		{
 			resolvingConnection();
 			messageReturn = MessageBox::Show(netDedicated->getStatus(), "Error from " + netDedicated->getIPServer() + ":" + netDedicated->getPortServer(),
@@ -632,21 +665,87 @@ System::Void ServerPage::LoadPlayer(array<String^>^ ArrayStream)
 
 System::Void ServerPage::connectServer()
 {
-	if (netDedicated->connectRcon())
+	if (netLocal)
 	{
-		goodConnection();
+		if (netDedicated->connectRcon())
+		{
+			goodConnection();
 
-		StartThread = gcnew ThreadStart(this, &ServerPage::listenDedicated);
-		thisThread = gcnew Thread(StartThread);
-		thisThread->Start();
-		Thread::Sleep(1000);
-		MessageBox::Show("Connection is started.", "Initialize", MessageBoxButtons::OK, MessageBoxIcon::Information);
-		netDedicated->sendData("chatSay(\"Log: Some Admin has started a GUI MyAdmin by Nobel3D\")");
+			deStartThread = gcnew ThreadStart(this, &ServerPage::listenDedicated);
+			deThread = gcnew Thread(deStartThread);
+			deThread->Start();
+			Thread::Sleep(1000);
+			MessageBox::Show("Connection is started.", "Initialize", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			netDedicated->sendData("chatSay(\"Log: Some Admin has started a GUI MyAdmin by Nobel3D\")");
+		}
+		else
+		{
+			errorConnection();
+			MessageBox::Show("Generic: Error connecting from Rcon.", "ERROR 02", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
 	}
 	else
 	{
-		errorConnection();
-		MessageBox::Show("Generic: Error connecting from Rcon.", "ERROR 02", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		netClient = gcnew TcpClient(); //creo con la gcnew un oggetto TcpClient
+		netClient->ReceiveTimeout = 15000; //setto il timeout di connessione
+		netClient->Connect(netDedicated->getIPServer(), netDedicated->getPortServer()); //apro la connessione che ha come parametri l' IP e la parta del server
+		                                                                                //mettere assolutamente una porta per la connessione col server.
+		netStream = netClient->GetStream(); //ottengo lo stream dati ONLINE
+		
+
+		if (netStream->CanWrite == true && netStream->CanRead == true)
+		{
+			goodConnection();
+		}
+		else
+		{
+			errorConnection();
+			MessageBox::Show("Error connecting server", "ERROR 10", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+}
+System::Void ServerPage::startHost(System::Object^  sender, System::EventArgs^  e)
+{
+	if (!hostActive)
+	{
+		netHost = gcnew Host(13000);
+		netHost->Start();
+		hostStartThread = gcnew ThreadStart(this, &ServerPage::processHost);
+		hostThread = gcnew Thread(hostStartThread);
+		hostThread->Start();
+		hostActive = true;
+	}
+	else
+	{
+		if (MessageBox::Show("MyAdmin has already started host, do you want close?", "Host", MessageBoxButtons::YesNo, MessageBoxIcon::Question)
+			== Windows::Forms::DialogResult::Yes)
+		{
+			netHost->~Host();
+			hostActive = false;
+		}
+	}
+}
+
+System::Void ServerPage::processHost()
+{
+	while (true)
+	{
+		String^ getData;
+		if (getData == "KILL")
+		{
+			array<Process^>^ Processes = Process::GetProcessesByName("SamHD_TSE_DedicatedServer");
+			for each (Process^ P in Processes)
+				P->Kill();
+			//it doesn't kill only dedicated of connection, but all process SamHD_TSE_DedicatedServer
+		}
+		else if (getData->Contains("SamHD_TSE_DedicatedServer.exe"))
+		{
+			System::Diagnostics::Process::Start(MyAdmin::MyDedicated::getDedicatedPath()+"\\"+getData);
+		}
+		else
+		{
+			netDedicated->sendData(getData);
+		}
 	}
 }
 

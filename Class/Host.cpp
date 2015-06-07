@@ -10,7 +10,10 @@ Host::Host(int Port)
 }
 Host::~Host()
 {
+	if (isConnected)
 	netClient->Close();
+
+	netServer->Stop();
 }
 
 void Host::Start()
@@ -24,13 +27,12 @@ String^ Host::Read()
 	array<Byte>^ ReadMe = gcnew array<Byte>(1024);
 	while (int i = netStream->Read(ReadMe, 0, ReadMe->Length))
 	{
-		// Translate data bytes to a ASCII String*.
+		// Translate data bytes to a ASCII String
 		return Text::Encoding::ASCII->GetString(ReadMe, 0, i);
 	}
 }
 void Host::Write(String^ data)
 {
-	data = data->ToUpper();
 	array<Byte>^msg = Text::Encoding::ASCII->GetBytes(data);
 
 	netStream->Write(msg, 0, msg->Length);

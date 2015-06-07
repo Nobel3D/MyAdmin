@@ -2,6 +2,8 @@
 #include "Rcon.h"
 #include "Database.h"
 #include "Players.h"
+#include "Host.h"
+#include "../Form/MyDedicated.h" //for Sam's path
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -26,6 +28,7 @@ private:
 	Button^ addKick();
 	Button^ addFail();
 	Button^ addPass();
+	Button^ addHost();
 	PictureBox^ addPicture(System::ComponentModel::ComponentResourceManager^  resources);
 
 	System::Void buttonShutdown_Click(System::Object^  sender, System::EventArgs^  e);
@@ -46,10 +49,12 @@ private:
 	System::Void threadRank(String^ AddMe);
 	System::Void threadPlayer(String^ AddMe);
 
-	System::Void sendServer(String^ toServer);
 	System::Void errorConnection();
 	System::Void goodConnection();
 	System::Void resolvingConnection();
+	System::Void processHost();
+	System::Void listenDedicated();
+	bool sendData(String^ data);
 
 	TabControl^ mainControl;
 	TabPage^ thisTab;
@@ -69,27 +74,40 @@ private:
 	Button^ btnKick;
 	Button^ btnFail;
 	Button^ btnPass;
+	Button^ btnHost;
 	PictureBox^ immPicture;
 	System::ComponentModel::ComponentResourceManager^ resourcePtr;
 
-
+	Host^ netHost;
 	Rcon^ netDedicated;
 	Database^ dbSam;
 	array<String^>^ arrayStream;
 	array<String^>^ arrayMatch;
 	List<Players^>^ listPlayer;
+	String^ netArgs;
+	int idPage;
 	int playerJoined;
 	bool StartRank;
+	bool hostActive;
+
+	//Connection Host
+	bool netLocal;
+	TcpClient^ netClient;
+	NetworkStream^ netStream;
 
 	//Threading
-	Thread^ thisThread;
-	ThreadStart^ StartThread;
+	Thread^ deThread;
+	ThreadStart^ deStartThread;
+	Thread^ hostThread;
+	ThreadStart^ hostStartThread;
 
 	System::Void LoadPlayer(array<String^>^ ArrayStream);
 public:
 	~ServerPage();
-	ServerPage(Rcon^ netConnection, TabControl^ controlTab);
+	ServerPage(Rcon^ netConnection, String^ args, TabControl^ controlTab);
 	TabPage^ getPage(String^ netName, System::ComponentModel::ComponentResourceManager^  resources);
 	System::Void connectServer();
-	System::Void listenDedicated();
+	System::Void startHost(System::Object^  sender, System::EventArgs^  e);
+	System::Void sendServer(String^ toServer);
+
 };

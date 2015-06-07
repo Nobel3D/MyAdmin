@@ -17,8 +17,11 @@ namespace MyAdmin {
 
 		int getPort() { return PortValue; }
 		String^ getPassword() { return Password; }
-		String^ getDedicatedPath() { return Exe; }
+		static String^ getDedicatedPath() { return Exe; }
 		String^ getName() { return Name; }
+		bool IsExited(){ return exit == Windows::Forms::DialogResult::Cancel; } //Has it been canceled (true = do nothing; false = start server)
+		String^ getArgs(){ return Args; }
+		String^ getIP(){ return stringIP; }
 
 		/*Change status*/
 		System::Void changeClick(Windows::Forms::ToolStripMenuItem^ CLICK)
@@ -257,7 +260,7 @@ namespace MyAdmin {
 			}
 		}
 		/*constructor of the MyDedicated form*/
-		MyDedicated(String^ SamDirectory)
+		MyDedicated(String^ SamDirectory, bool localHost)
 		{
 			InitializeComponent();
 			comboBoxMode->SelectedIndex = 0;
@@ -268,8 +271,13 @@ namespace MyAdmin {
 				Exe = SamDirectory;
 			else
 				Exe = "SamHD_TSE_DedicatedServer.exe";
+			if (!localHost)
+			{
+				label16->Visible = true;
+				textBoxIP->Visible = true;
+				remoteServer = true;
+			}
 		}
-	public: bool IsExited(){ return Exited; }
 
 	protected:
 		~MyDedicated()
@@ -282,9 +290,11 @@ namespace MyAdmin {
 	private: int PortValue;
 	private: String^ Password;
 	private: String^ Name;
-	private: bool Exited;
-	private: String^ Exe;
+	private: bool remoteServer;
+	private: static String^ Exe;
 	private: String^ Args;
+	private: String^ stringIP;
+	private: Windows::Forms::DialogResult exit;
 
 #pragma region Form Pointer
 	private: System::Windows::Forms::Label^  label12;
@@ -348,6 +358,8 @@ private: System::Windows::Forms::Label^  label15;
 private: System::Windows::Forms::TextBox^  textBoxScript;
 private: System::Windows::Forms::CheckBox^  checkBox1;
 private: System::Windows::Forms::NumericUpDown^  numScript;
+private: System::Windows::Forms::Label^  label16;
+private: System::Windows::Forms::TextBox^  textBoxIP;
 
 
 
@@ -420,6 +432,8 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 				 this->textBoxScript = (gcnew System::Windows::Forms::TextBox());
 				 this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 				 this->numScript = (gcnew System::Windows::Forms::NumericUpDown());
+				 this->textBoxIP = (gcnew System::Windows::Forms::TextBox());
+				 this->label16 = (gcnew System::Windows::Forms::Label());
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numExtraXplayer))->BeginInit();
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numExtra))->BeginInit();
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numFrag))->BeginInit();
@@ -520,6 +534,8 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 				 // 
 				 // groupBox1
 				 // 
+				 this->groupBox1->Controls->Add(this->label16);
+				 this->groupBox1->Controls->Add(this->textBoxIP);
 				 this->groupBox1->Controls->Add(this->label14);
 				 this->groupBox1->Controls->Add(this->label13);
 				 this->groupBox1->Controls->Add(this->numBPS);
@@ -688,7 +704,7 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 				 // 
 				 // textBoxPort
 				 // 
-				 this->textBoxPort->Location = System::Drawing::Point(423, 49);
+				 this->textBoxPort->Location = System::Drawing::Point(423, 62);
 				 this->textBoxPort->Name = L"textBoxPort";
 				 this->textBoxPort->Size = System::Drawing::Size(123, 20);
 				 this->textBoxPort->TabIndex = 8;
@@ -721,7 +737,7 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 				 // label2
 				 // 
 				 this->label2->AutoSize = true;
-				 this->label2->Location = System::Drawing::Point(357, 52);
+				 this->label2->Location = System::Drawing::Point(357, 65);
 				 this->label2->Name = L"label2";
 				 this->label2->Size = System::Drawing::Size(60, 13);
 				 this->label2->TabIndex = 5;
@@ -730,7 +746,7 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 				 // label1
 				 // 
 				 this->label1->AutoSize = true;
-				 this->label1->Location = System::Drawing::Point(7, 52);
+				 this->label1->Location = System::Drawing::Point(7, 65);
 				 this->label1->Name = L"label1";
 				 this->label1->Size = System::Drawing::Size(69, 13);
 				 this->label1->TabIndex = 4;
@@ -738,7 +754,7 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 				 // 
 				 // textBoxName
 				 // 
-				 this->textBoxName->Location = System::Drawing::Point(82, 49);
+				 this->textBoxName->Location = System::Drawing::Point(82, 62);
 				 this->textBoxName->Name = L"textBoxName";
 				 this->textBoxName->Size = System::Drawing::Size(232, 20);
 				 this->textBoxName->TabIndex = 3;
@@ -1011,6 +1027,25 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 				 this->numScript->TabIndex = 35;
 				 this->numScript->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2, 0, 0, 0 });
 				 // 
+				 // textBoxIP
+				 // 
+				 this->textBoxIP->Location = System::Drawing::Point(128, 19);
+				 this->textBoxIP->Name = L"textBoxIP";
+				 this->textBoxIP->Size = System::Drawing::Size(334, 20);
+				 this->textBoxIP->TabIndex = 24;
+				 this->textBoxIP->Text = L"127.0.0.1";
+				 this->textBoxIP->Visible = false;
+				 // 
+				 // label16
+				 // 
+				 this->label16->AutoSize = true;
+				 this->label16->Location = System::Drawing::Point(41, 22);
+				 this->label16->Name = L"label16";
+				 this->label16->Size = System::Drawing::Size(51, 13);
+				 this->label16->TabIndex = 25;
+				 this->label16->Text = L"Server IP";
+				 this->label16->Visible = false;
+				 // 
 				 // MyDedicated
 				 // 
 				 this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1208,37 +1243,15 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 				 else
 					 Args += " +prj_strDisabledVoteTypes \"\"";
 
+				 stringIP = textBoxIP->Text;
 
-				 if (IO::File::Exists(Exe))
+				 if (!remoteServer)
 				 {
-					 PortValue = Convert::ToInt32(textBoxPort->Text);
-					 Password = textBoxPassword->Text;
-					 Name = textBoxName->Text;
-					 textBoxStatus->Text = "Started!";
-					 timeScript();
-					 System::Diagnostics::Process::Start(Exe, Args);
-					 MessageBox::Show("Thank you for using MyDedicated -Nobel3D", "This End", MessageBoxButtons::OK, MessageBoxIcon::Information);
-					 MyAdmin::MyDedicated::~MyDedicated();
-				 }
-				 else
-				 {
-					 openFile->ShowDialog();
-					 while (openFile->SafeFileName != "SamHD_TSE_DedicatedServer.exe")
+					 if (IO::File::Exists(Exe))
 					 {
-						 MessageBox::Show("Selected file isn't valid! You must select your Serious Sam HD Dedicated Server", "Error File", MessageBoxButtons::OK, MessageBoxIcon::Error);
-						 if (openFile->ShowDialog() == Windows::Forms::DialogResult::Cancel)
-						 {
-							 Exited = true;
-							 break;
-						 }
-					 }
-					 if (!Exited)
-					 {
-
-						 Exe = openFile->FileName;
-						 Name = textBoxName->Text;
 						 PortValue = Convert::ToInt32(textBoxPort->Text);
 						 Password = textBoxPassword->Text;
+						 Name = textBoxName->Text;
 						 textBoxStatus->Text = "Started!";
 						 timeScript();
 						 System::Diagnostics::Process::Start(Exe, Args);
@@ -1247,8 +1260,35 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 					 }
 					 else
 					 {
-						 Exited = false;
+						 exit = openFile->ShowDialog();
+						 while (openFile->SafeFileName != "SamHD_TSE_DedicatedServer.exe" || exit == Windows::Forms::DialogResult::Cancel)
+						 {
+							 MessageBox::Show("Selected file isn't valid! You must select your Serious Sam HD Dedicated Server", "Error File", MessageBoxButtons::OK, MessageBoxIcon::Error);
+						 }
+						 if (exit != Windows::Forms::DialogResult::Cancel)
+						 {
+
+							 Exe = openFile->FileName;
+							 Name = textBoxName->Text;
+							 PortValue = Convert::ToInt32(textBoxPort->Text);
+							 Password = textBoxPassword->Text;
+							 textBoxStatus->Text = "Started!";
+							 timeScript();
+							 System::Diagnostics::Process::Start(Exe, Args);
+							 MessageBox::Show("Thank you for using MyDedicated -Nobel3D", "This End", MessageBoxButtons::OK, MessageBoxIcon::Information);
+							 MyAdmin::MyDedicated::~MyDedicated();
+						 }
+						 else
+						 {
+							 MessageBox::Show("Thank you for using MyDedicated -Nobel3D", "This End", MessageBoxButtons::OK, MessageBoxIcon::Information);
+							 MyAdmin::MyDedicated::~MyDedicated();
+						 }
 					 }
+				 }
+				 else
+				 {
+					 MessageBox::Show("Thank you for using MyDedicated -Nobel3D", "This End", MessageBoxButtons::OK, MessageBoxIcon::Information);
+					 MyAdmin::MyDedicated::~MyDedicated();
 				 }
 	}
 #pragma region ClickEditor
@@ -1373,22 +1413,12 @@ private: System::Windows::Forms::NumericUpDown^  numScript;
 					 textBoxPassword->UseSystemPasswordChar = true;
 	}
 	private: System::Void buttonUpdate_Click(System::Object^  sender, System::EventArgs^  e) {
-				 System::Diagnostics::Process::Start("http://seriousteamhd.altervista.org/Suite_MySam/MyDedicated/NeedUpdate.php?version=1.1");
 	}
 	private: System::Void buttonExit_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Exited = true;
-				 MyAdmin::MyDedicated::~MyDedicated();
+		exit = Windows::Forms::DialogResult::Cancel;
+		MyAdmin::MyDedicated::~MyDedicated();
 	}
 	private: System::Void MyDedicated_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
-				 if (PortValue != 0)
-				 {
-					 Exited = false;
-				 }
-				 else
-				 {
-					 Exited = true;
-				 }
-				 MyDedicated::~MyDedicated();
 	}
 	private: System::Void buttonSave_Click(System::Object^  sender, System::EventArgs^  e) {
 				 IO::StreamWriter^ SaveCfg = gcnew IO::StreamWriter("Server.conf", false);

@@ -18,6 +18,7 @@ Rcon::~Rcon()
 {
 	if (RconConnected == true)
 	{
+		sendData("chatSay(\"Log: Closing terminal of MyAdmin!\")");
 		addLog("[SYS] Closing connection from " + IPServer + " : " + PortServer);
 		Status = "Disconnecting";
 		iReader->Close();
@@ -175,6 +176,7 @@ bool Rcon::sendData(String^ command)
 	catch (Exception^ fail)
 	{
 		addLog("[SYS] fatal error on writing into stream");
+		RconConnected = false;
 		this->~Rcon();
 		Status = "There was an error in writing into the stream data";
 	}

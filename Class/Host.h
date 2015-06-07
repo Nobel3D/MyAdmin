@@ -12,6 +12,7 @@ private:
 	TcpListener^ netServer;
 	NetworkStream^ netStream;
 	TcpClient^ netClient;
+	bool isConnected;
 
 public:
 	Host(int Port);

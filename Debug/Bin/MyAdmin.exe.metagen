@@ -25,22 +25,24 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class MyAdmin.Credits: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class MyAdmin.MyDedicated: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     getPort(): PrivateScope, Public, HideBySig
     getPassword(): PrivateScope, Public, HideBySig
-    getDedicatedPath(): PrivateScope, Public, HideBySig
+    getDedicatedPath(): PrivateScope, Public, Static, HideBySig
     getName(): PrivateScope, Public, HideBySig
+    IsExited(): PrivateScope, Public, HideBySig
+    getArgs(): PrivateScope, Public, HideBySig
+    getIP(): PrivateScope, Public, HideBySig
     changeClick(ToolStripMenuItem): PrivateScope, Public, HideBySig
     setLevels(ComboBox, Int32): PrivateScope, Public, HideBySig
     getLevels(Int32): PrivateScope, Public, HideBySig
     timeScript(): PrivateScope, Public, HideBySig
-    IsExited(): PrivateScope, Public, HideBySig
+Class MyAdmin.Credits: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class MyAdmin.SupportForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Rcon): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

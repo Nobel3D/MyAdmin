@@ -21,6 +21,7 @@ namespace MyAdmin {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Diagnostics;
 	using namespace System::Threading;
 
 	public ref class MainForm : public System::Windows::Forms::Form
@@ -34,7 +35,6 @@ namespace MyAdmin {
 			textBoxStatus->Text = "Ready";
 			Rcon::addLog2("[SYS] System Loading");
 
-			array_Player = gcnew List<Players^>;
 			array_match = gcnew array<String^>(7);
 			Connection = gcnew List < Rcon^ > ;
 
@@ -58,154 +58,114 @@ namespace MyAdmin {
 		{
 			if (components)
 			{
-					MessageBox::Show("This application will be closed and will disconnects from server",
-						"WARNING", MessageBoxButtons::OK, MessageBoxIcon::Warning);
-					stm_WriteConfig = gcnew IO::StreamWriter("MyAdmin.conf", false);
-					Rcon::addLog2("[SYS] Saving Configurarion");
-					stm_WriteConfig->WriteLine("LastIP=" + bufferIP);
-					stm_WriteConfig->WriteLine("LastPort=" + bufferPort);
-					stm_WriteConfig->WriteLine("Signature=" + str_Message);
-					stm_WriteConfig->WriteLine("TimedString=" + str_Timer);
-					stm_WriteConfig->WriteLine("TimedTime=" + int_Timer);
-					stm_WriteConfig->WriteLine("ServerDedicatedPath=" + MyDedicatedPath);
-					stm_WriteConfig->WriteLine("KillMessage=" + str_KillMessage);
-					stm_WriteConfig->WriteLine("SuicideMessage=" + str_SuicideMessage);
-					stm_WriteConfig->Close();
+				MessageBox::Show("This application will be closed and will disconnects from server",
+					"WARNING", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+				stm_WriteConfig = gcnew IO::StreamWriter("MyAdmin.conf", false);
+				Rcon::addLog2("[SYS] Saving Configurarion");
+				stm_WriteConfig->WriteLine("LastIP=" + bufferIP);
+				stm_WriteConfig->WriteLine("LastPort=" + bufferPort);
+				stm_WriteConfig->WriteLine("Signature=" + str_Message);
+				stm_WriteConfig->WriteLine("ServerDedicatedPath=" + MyDedicatedPath);
+				stm_WriteConfig->Close();
 
-					textBoxStatus->Text = "Configuration Saved!";
-					Rcon::addLog2("[SYS] Closing Application!");
-					delete components;
+				textBoxStatus->Text = "Configuration Saved!";
+				Rcon::addLog2("[SYS] Closing Application!");
+				delete components;
 			}
 		}
 	private: System::Void settingUpMessage()
 	{
-				 form_Message[0] = "You can get source code of MyAdmin on GitHub : https://github.com/Nobel3D/MyAdmin Feel free to change the source code, and report any bug.";
-				 form_Message[1] = "You can change the signature on chat and set any timed message, Set your MyAdmin how you liking!";
-				 form_Message[2] = "You can use all command of Serious Sam on the textbox \"Send Rcon\". For example you can use \"samShowBanList()\" for see sam's ban list.";
-				 form_Message[3] = "You can use MyRanked, only if you have setted a database, and you must contact Nobel3D for this stuff: http://steamcommunity.com/groups/Nobel3DOfficial/discussions/1/";
-				 form_Message[4] = "You can ban some player with temporary ban, you can ban a player for 30 min to one month.";
-				 form_Message[5] = "You can create a local server, but keep in your mind that the local ip is: 127.0.0.1 (LocalHost)";
-				 form_Message[6] = "Maybe I will make a version for Serious Sam 3 and Serious Sam Revolution, you stay connected!";
-				 form_Message[7] = "You can see the score on real time, if you have MyRanked on your server";
-				 form_Message[8] = "The òpò is your friend, but if you aren't italian, you can't understand!";
-				 form_Message[9] = "For me, and my experience as admin for some server, the spectators on the match are untouchables!";
+		form_Message[0] = "You can get source code of MyAdmin on GitHub : https://github.com/Nobel3D/MyAdmin Feel free to change the source code, and report any bug.";
+		form_Message[1] = "You can change the signature on chat and set any timed message, Set your MyAdmin how you liking!";
+		form_Message[2] = "You can use all command of Serious Sam on the textbox \"Send Rcon\". For example you can use \"samShowBanList()\" for see sam's ban list.";
+		form_Message[3] = "You can use MyRanked, only if you have setted a database, and you must contact Nobel3D for this stuff: http://steamcommunity.com/groups/Nobel3DOfficial/discussions/1/";
+		form_Message[4] = "You can ban some player with temporary ban, you can ban a player for 30 min to one month.";
+		form_Message[5] = "You can create a local server, but keep in your mind that the local ip is: 127.0.0.1 (LocalHost)";
+		form_Message[6] = "Maybe I will make a version for Serious Sam 3 and Serious Sam Revolution, you stay connected!";
+		form_Message[7] = "You can see the score on real time, if you have MyRanked on your server";
+		form_Message[8] = "The òpò is your friend, but if you aren't italian, you can't understand!";
+		form_Message[9] = "For me, and my experience as admin for some server, the spectators on the match are untouchables!";
 	}
 	private: System::Void DidYouKnow()
 	{
-				 int iCount = 0;
-				 do
-				 {
-					 form_YouKnow = gcnew YouKnow(form_Message[iCount]);
-					 form_YouKnow->ShowDialog();
-					 iCount++;
-				 } 
-				 while (form_YouKnow->getNext()&&iCount!=MAXMESSAGEKNOW);
+		int iCount = 0;
+		do
+		{
+			form_YouKnow = gcnew YouKnow(form_Message[iCount]);
+			form_YouKnow->ShowDialog();
+			iCount++;
+		} while (form_YouKnow->getNext() && iCount != MAXMESSAGEKNOW);
 	}
-	
+
 			 /*It reads the config file, and set all values (I don't like this method, in future it will be as MyDedicated config)*/
 	private: System::Void ConfigFile(String^ Path)
 	{
-				 stm_ReadConfig = gcnew IO::StreamReader(Path);
-				 Rcon::addLog2("[SYS] Loading Configuration");
-				 array_Word = gcnew array<array<String^>^>(10);
-				 for (int c = 0; c < 10; c++)
-					 array_Word[c] = gcnew array<String^>(2);
+		stm_ReadConfig = gcnew IO::StreamReader(Path);
+		Rcon::addLog2("[SYS] Loading Configuration");
+		array_Word = gcnew array<array<String^>^>(10);
+		for (int c = 0; c < 10; c++)
+			array_Word[c] = gcnew array<String^>(2);
 
-				 int i = 0;
-				 while (!(stm_ReadConfig->EndOfStream))
-				 {
-					 str_Analyze = stm_ReadConfig->ReadLine();
-					 array_Word[i] = str_Analyze->Split(array_Split, StringSplitOptions::None);
-					 i++;
-				 }
-				 stm_ReadConfig->Close();
-				 for (int c = 0; c < 8; c++)
-				 {
-					 if (array_Word[c][0] == "LastIP")
-					 {
-						 comboBoxIP->Items->Add(array_Word[c][1]);
-						 bufferIP = array_Word[c][1];
-					 }
-					 if (array_Word[c][0] == "LastPort")
-					 {
-						 if (array_Word[c][1] != "27015")
-							 comboBoxPort->Items->Add(array_Word[c][1]);
-						 bufferPort = array_Word[c][1];
-					 }
-					 if (array_Word[c][0] == "Signature")
-						 str_Message = array_Word[c][1];
-					 if (array_Word[c][0] == "TimedString")
-						 str_Timer = array_Word[c][1];
-					 if (array_Word[c][0] == "TimedTime")
-						 int_Timer = Convert::ToInt32(array_Word[c][1]);
-					 if (array_Word[c][0] == "ServerDedicatedPath")
-						 MyDedicatedPath = array_Word[c][1];
-					 if (array_Word[c][0] == "KillMessage")
-						 str_KillMessage = array_Word[c][1];
-					 if (array_Word[c][0] == "SuicideMessage")
-						 str_SuicideMessage = array_Word[c][1];
-				 }
-				 if (str_SuicideMessage == "NULL")
-				 {
-					 EnabledMessage = false;
-				 }
+		int i = 0;
+		while (!(stm_ReadConfig->EndOfStream))
+		{
+			str_Analyze = stm_ReadConfig->ReadLine();
+			array_Word[i] = str_Analyze->Split(array_Split, StringSplitOptions::None);
+			i++;
+		}
+		stm_ReadConfig->Close();
+		for (int c = 0; c < 8; c++)
+		{
+			if (array_Word[c][0] == "LastIP")
+			{
+				comboBoxIP->Items->Add(array_Word[c][1]);
+				bufferIP = array_Word[c][1];
+			}
+			if (array_Word[c][0] == "LastPort")
+			{
+				if (array_Word[c][1] != "27015")
+					comboBoxPort->Items->Add(array_Word[c][1]);
+				bufferPort = array_Word[c][1];
+			}
+			if (array_Word[c][0] == "Signature")
+				str_Message = array_Word[c][1];
+			if (array_Word[c][0] == "ServerDedicatedPath")
+				MyDedicatedPath = array_Word[c][1];
+		}
 	}
 
 #pragma endregion
 			 //MyClass
-	private: ServerPage^ listConnect;
 	private: List<Rcon^>^ Connection;
-	private: Database^ dbSam;
-	private: List<Players^>^ array_Player;
-	private: Host^ netHost;
+	private: ServerPage^ listPage;
 			 //Main String
-	private: static String^ str_KillMessage = "'opo'";
-	private: static String^ str_SuicideMessage = "xddd";
 	private: static String^ str_Message = "Admin";
 	private: static String^ Version = "2.0 BETA 1";
 	private: static String^ MyDedicatedPath = "";
-	private: array<array<String^>^>^ FirstString;
 			 //Config file MyAdmin.conf
 	public: IO::StreamWriter^ stm_WriteConfig;
 	public: IO::StreamReader^ stm_ReadConfig;
 	public: String^ str_Analyze;
 	public: array<array<String^>^>^ array_Word;
 	public: static array<String^>^ array_Split = { "=" };
-			//Main Timer
-	private: static int Seconds;
-	private: static int Minute;
-			 //Spam protocol
-	private: int ActiveSend;
-	private: bool Spam;
-			 //Forms
+			//Forms
 	private: SupportForm^ form_SupportVoid;
 	private: SupportForm^ form_SupportInt;
 	private: SupportForm^ form_SupportUnban;
 	private: MyDedicated^ form_MyDedicated;
 	private: YouKnow^ form_YouKnow;
 	private: static array<String^>^ form_Message = gcnew array<String^>(MAXMESSAGEKNOW);
-			 //Conditional Timer
-	private: String^ str_Timer;
-	private: int int_Timer;
-	private: int secTime;
-	private: int minTime;
-	private: int CstdTime;
-	private: static int Multy = 1;
 			 //RAS (Runtime Administration Socket)
-	private: bool StartRank;
-	private: static String^ str_Help = "";
-	private: static array<String^>^ Spliter = { ": ", ", " };
-	private: static array<String^>^ localSplit = { "\"" };
-	private: array<String^>^ array_Stream;
 	private: array<String^>^ array_match;
-	private: static String^ Buffer = "";
-	private: int playerJoined;
-	private: bool EnabledMessage;
 			 //Other
 	private: int netCount;
 	private: int netCurrent;
 	private: String^ bufferIP;
 	private: String^ bufferPort;
+			 //Host
+	private: bool HostActive;
+	private: Thread^ hostThread;
+	private: ThreadStart^ startHostThread;
 
 #pragma region Form Pointer
 
@@ -239,7 +199,7 @@ namespace MyAdmin {
 	private: System::Windows::Forms::ToolStripMenuItem^  detailsToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  recentChatToolStripMenuItem;
 	private: System::Windows::Forms::Timer^  timerRAS;
-	private: System::Windows::Forms::ToolStripMenuItem^  killMessageToolStripMenuItem;
+
 	private: System::Windows::Forms::TextBox^  textBoxStatus;
 	private: System::Windows::Forms::LinkLabel^  linkLabel1;
 	private: System::Windows::Forms::Button^  buttonUpdate;
@@ -249,22 +209,23 @@ namespace MyAdmin {
 	private: System::Windows::Forms::ToolStripMenuItem^  didYouKnowToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  creditsToolStripMenuItem;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
-private: List<System::Windows::Forms::TabPage^>  tabList;
-private: System::Windows::Forms::PictureBox^  pictureBox2;
-private: System::Windows::Forms::TabPage^  tabPage2;
-private: System::Windows::Forms::TextBox^  textBoxName;
-private: System::Windows::Forms::Label^  label4;
-private: System::Windows::Forms::Button^  buttonConfig;
-private: System::Windows::Forms::Button^  buttonHost;
-private: System::Windows::Forms::Button^  buttonLocal;
-private: System::Windows::Forms::Label^  label2;
-private: System::Windows::Forms::ComboBox^  comboBoxPort;
-private: System::Windows::Forms::Button^  buttonAdd;
-private: System::Windows::Forms::ComboBox^  comboBoxIP;
-private: System::Windows::Forms::Label^  label1;
-private: System::Windows::Forms::Label^  labelIP;
-private: System::Windows::Forms::TextBox^  textPassword;
-private: System::Windows::Forms::TabControl^  serverList;
+	private: List<System::Windows::Forms::TabPage^>  tabList;
+	private: System::Windows::Forms::PictureBox^  pictureBox2;
+	private: System::Windows::Forms::TabPage^  tabPage2;
+	private: System::Windows::Forms::TextBox^  textBoxName;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Button^  buttonConfig;
+
+	private: System::Windows::Forms::Button^  buttonLocal;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::ComboBox^  comboBoxPort;
+	private: System::Windows::Forms::Button^  buttonAdd;
+	private: System::Windows::Forms::ComboBox^  comboBoxIP;
+	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  labelIP;
+	private: System::Windows::Forms::TextBox^  textPassword;
+	private: System::Windows::Forms::TabControl^  serverList;
+private: System::Windows::Forms::Button^  buttonRemote;
 	private: System::ComponentModel::IContainer^  components;
 #pragma endregion
 
@@ -299,7 +260,6 @@ private: System::Windows::Forms::TabControl^  serverList;
 				 this->chatToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 				 this->timedMessageToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 				 this->signatureChatToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-				 this->killMessageToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 				 this->currentMatchToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 				 this->detailsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 				 this->recentChatToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -317,7 +277,6 @@ private: System::Windows::Forms::TabControl^  serverList;
 				 this->textBoxName = (gcnew System::Windows::Forms::TextBox());
 				 this->label4 = (gcnew System::Windows::Forms::Label());
 				 this->buttonConfig = (gcnew System::Windows::Forms::Button());
-				 this->buttonHost = (gcnew System::Windows::Forms::Button());
 				 this->buttonLocal = (gcnew System::Windows::Forms::Button());
 				 this->label2 = (gcnew System::Windows::Forms::Label());
 				 this->comboBoxPort = (gcnew System::Windows::Forms::ComboBox());
@@ -327,6 +286,7 @@ private: System::Windows::Forms::TabControl^  serverList;
 				 this->labelIP = (gcnew System::Windows::Forms::Label());
 				 this->textPassword = (gcnew System::Windows::Forms::TextBox());
 				 this->serverList = (gcnew System::Windows::Forms::TabControl());
+				 this->buttonRemote = (gcnew System::Windows::Forms::Button());
 				 this->menuStrip1->SuspendLayout();
 				 (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 				 this->tabPage2->SuspendLayout();
@@ -357,7 +317,7 @@ private: System::Windows::Forms::TabControl^  serverList;
 				 // unBanToolStripMenuItem
 				 // 
 				 this->unBanToolStripMenuItem->Name = L"unBanToolStripMenuItem";
-				 this->unBanToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+				 this->unBanToolStripMenuItem->Size = System::Drawing::Size(109, 22);
 				 this->unBanToolStripMenuItem->Text = L"UnBan";
 				 this->unBanToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::unBanToolStripMenuItem_Click);
 				 // 
@@ -514,9 +474,9 @@ private: System::Windows::Forms::TabControl^  serverList;
 				 // 
 				 // chatToolStripMenuItem
 				 // 
-				 this->chatToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				 this->chatToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 					 this->timedMessageToolStripMenuItem,
-						 this->signatureChatToolStripMenuItem, this->killMessageToolStripMenuItem
+						 this->signatureChatToolStripMenuItem
 				 });
 				 this->chatToolStripMenuItem->Name = L"chatToolStripMenuItem";
 				 this->chatToolStripMenuItem->Size = System::Drawing::Size(44, 20);
@@ -535,13 +495,6 @@ private: System::Windows::Forms::TabControl^  serverList;
 				 this->signatureChatToolStripMenuItem->Size = System::Drawing::Size(157, 22);
 				 this->signatureChatToolStripMenuItem->Text = L"Signature Chat";
 				 this->signatureChatToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::signatureChatToolStripMenuItem_Click);
-				 // 
-				 // killMessageToolStripMenuItem
-				 // 
-				 this->killMessageToolStripMenuItem->Name = L"killMessageToolStripMenuItem";
-				 this->killMessageToolStripMenuItem->Size = System::Drawing::Size(157, 22);
-				 this->killMessageToolStripMenuItem->Text = L"Kill Message";
-				 this->killMessageToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::killMessageToolStripMenuItem_Click);
 				 // 
 				 // currentMatchToolStripMenuItem
 				 // 
@@ -657,10 +610,10 @@ private: System::Windows::Forms::TabControl^  serverList;
 				 // 
 				 // tabPage2
 				 // 
+				 this->tabPage2->Controls->Add(this->buttonRemote);
 				 this->tabPage2->Controls->Add(this->textBoxName);
 				 this->tabPage2->Controls->Add(this->label4);
 				 this->tabPage2->Controls->Add(this->buttonConfig);
-				 this->tabPage2->Controls->Add(this->buttonHost);
 				 this->tabPage2->Controls->Add(this->buttonLocal);
 				 this->tabPage2->Controls->Add(this->label2);
 				 this->tabPage2->Controls->Add(this->comboBoxPort);
@@ -701,16 +654,6 @@ private: System::Windows::Forms::TabControl^  serverList;
 				 this->buttonConfig->TabIndex = 25;
 				 this->buttonConfig->Text = L"Server Configuration";
 				 this->buttonConfig->UseVisualStyleBackColor = true;
-				 // 
-				 // buttonHost
-				 // 
-				 this->buttonHost->Location = System::Drawing::Point(623, 21);
-				 this->buttonHost->Name = L"buttonHost";
-				 this->buttonHost->Size = System::Drawing::Size(130, 45);
-				 this->buttonHost->TabIndex = 24;
-				 this->buttonHost->Text = L"Create Host";
-				 this->buttonHost->UseVisualStyleBackColor = true;
-				 this->buttonHost->Click += gcnew System::EventHandler(this, &MainForm::buttonHost_Click);
 				 // 
 				 // buttonLocal
 				 // 
@@ -794,6 +737,16 @@ private: System::Windows::Forms::TabControl^  serverList;
 				 this->serverList->Size = System::Drawing::Size(767, 458);
 				 this->serverList->TabIndex = 39;
 				 // 
+				 // buttonRemote
+				 // 
+				 this->buttonRemote->Location = System::Drawing::Point(609, 21);
+				 this->buttonRemote->Name = L"buttonRemote";
+				 this->buttonRemote->Size = System::Drawing::Size(130, 45);
+				 this->buttonRemote->TabIndex = 28;
+				 this->buttonRemote->Text = L"Create Remote Server";
+				 this->buttonRemote->UseVisualStyleBackColor = true;
+				 this->buttonRemote->Click += gcnew System::EventHandler(this, &MainForm::buttonRemote_Click);
+				 // 
 				 // MainForm
 				 // 
 				 this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -826,80 +779,80 @@ private: System::Windows::Forms::TabControl^  serverList;
 #pragma endregion
 
 	private: System::Void buttonRestart_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("gamRestartServer()");
+		Connection[netCurrent]->sendData("gamRestartServer()");
 	}
 	private: System::Void buttonPause_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samPauseGame()");
+		Connection[netCurrent]->sendData("samPauseGame()");
 	}
 	private: System::Void buttonPass_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samVotePass()");
+		Connection[netCurrent]->sendData("samVotePass()");
 	}
 	private: System::Void buttonFail_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samVoteFail()");
+		Connection[netCurrent]->sendData("samVoteFail()");
 	}
 	private: System::Void buttonKick_Click(System::Object^  sender, System::EventArgs^  e) {
-				
+
 	}
 	private: System::Void buttonBan_Click(System::Object^  sender, System::EventArgs^  e) {
-				
+
 	}
 	private: System::Void cheatEnable0ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("cht_bEnableCheats=0");
+		Connection[netCurrent]->sendData("cht_bEnableCheats=0");
 	}
 	private: System::Void cheat1ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("cht_bEnableCheats=1");
+		Connection[netCurrent]->sendData("cht_bEnableCheats=1");
 	}
 	private: System::Void cheat2ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("cht_bEnableCheats=2");
+		Connection[netCurrent]->sendData("cht_bEnableCheats=2");
 	}
 	private: System::Void cheat3ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("cht_bEnableCheats=3");
+		Connection[netCurrent]->sendData("cht_bEnableCheats=3");
 	}
 
 	private: System::Void nextMapToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samNextMap()");
+		Connection[netCurrent]->sendData("samNextMap()");
 	}
 
 	private: System::Void restartMapToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				 Connection[netCurrent]->sendData("samRestartMap()");
+		Connection[netCurrent]->sendData("samRestartMap()");
 	}
 
 	private: System::Void fortressToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/Fortress.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/Fortress.wld\")");
 	}
 	private: System::Void brkeenChevapToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/BrkeenChevap.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/BrkeenChevap.wld\")");
 	}
 	private: System::Void weGotSkullToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/WeGotSkullsNBonesToo.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/WeGotSkullsNBonesToo.wld\")");
 	}
 	private: System::Void holeToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/Hole.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/Hole.wld\")");
 	}
 	private: System::Void jumpOverToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/JumpOver.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/JumpOver.wld\")");
 	}
 	private: System::Void medievalRageToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/MedievalRage.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/MedievalRage.wld\")");
 	}
 	private: System::Void royalPurgatoryToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/RoyalPurgatory.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/RoyalPurgatory.wld\")");
 	}
 	private: System::Void sunPalaceToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/SunPalace.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/SunPalace.wld\")");
 	}
 	private: System::Void theLostTombToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/TheLostTomb.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/TheLostTomb.wld\")");
 	}
 	private: System::Void yodellerToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/Yodeller.wld\")");
+		Connection[netCurrent]->sendData("samChangeMap(\"Content/SeriousSamHD/Levels/Z5_Other/Yodeller.wld\")");
 	}
 	private: System::Void linkLabel1_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
-				 System::Diagnostics::Process::Start("http://steamcommunity.com/groups/Nobel3DOfficial");
+		System::Diagnostics::Process::Start("http://steamcommunity.com/groups/Nobel3DOfficial");
 	}
 	private: System::Void buttonUpdate_Click(System::Object^  sender, System::EventArgs^  e) {
-				 System::Diagnostics::Process::Start("http://www.seriousteamhd.altervista.org/SeriousSamHDMyAdmin/NeedUpdate.php?version=" + Version);
+		System::Diagnostics::Process::Start("http://www.seriousteamhd.altervista.org/SeriousSamHDMyAdmin/NeedUpdate.php?version=" + Version);
 	}
 	private: System::Void groupBox1_Enter(System::Object^  sender, System::EventArgs^  e) {
 	}
@@ -909,132 +862,101 @@ private: System::Windows::Forms::TabControl^  serverList;
 
 	}
 	private: System::Void buttonExit_Click(System::Object^  sender, System::EventArgs^  e) {
-				 if (MessageBox::Show("Do you want disconnect from " + Connection[netCurrent]->getIPServer() + " : " + Connection[netCurrent]->getPortServer() + " ?",
-					 "Change Server?", MessageBoxButtons::YesNo, MessageBoxIcon::Exclamation) == Windows::Forms::DialogResult::Yes)
-				 {
-					 Connection[netCurrent]->~Rcon();
+		if (MessageBox::Show("Do you want disconnect from " + Connection[netCurrent]->getIPServer() + " : " + Connection[netCurrent]->getPortServer() + " ?",
+			"Change Server?", MessageBoxButtons::YesNo, MessageBoxIcon::Exclamation) == Windows::Forms::DialogResult::Yes)
+		{
+			Connection[netCurrent]->~Rcon();
 
-					 comboBoxIP->Text = "";
-					 comboBoxPort->Text = "";
-					 textPassword->Text = "";
-					 Rcon::addLog2("[SYS] Waiting new Connection");
-				 }
+			comboBoxIP->Text = "";
+			comboBoxPort->Text = "";
+			textPassword->Text = "";
+			Rcon::addLog2("[SYS] Waiting new Connection");
+		}
 	}
 	private: System::Void timedMessageToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				 form_SupportVoid = gcnew SupportForm();
+		form_SupportVoid = gcnew SupportForm();
 
-				 form_SupportVoid->ShowDialog();
+		form_SupportVoid->ShowDialog();
 
-				 str_Timer = form_SupportVoid->getMessage();
-				 int_Timer = form_SupportVoid->getMinute();
+		//		 str_Timer = form_SupportVoid->getMessage();
+		//		 int_Timer = form_SupportVoid->getMinute();
 	}
 	private: System::Void signatureChatToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				 form_SupportInt = gcnew SupportForm(1);
+		form_SupportInt = gcnew SupportForm(1);
 
-				 form_SupportInt->ShowDialog();
+		form_SupportInt->ShowDialog();
 
-				 str_Message = form_SupportInt->getSignature();
+		str_Message = form_SupportInt->getSignature();
 
 
-	}
-	private: System::Void ThreadHost()
-	{
-		while (true)
-		{
-			String^ getData;
-			if (getData == "END")
-			{
-
-			}
-			if (getData == "START")
-			{
-				if (getData->Contains("+"))
-				{
-
-				}
-			}
-			else
-			{
-
-			}
-		}
 	}
 	private: System::Void unBanToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 form_SupportUnban = gcnew SupportForm("òpò");
-				 form_SupportUnban->ShowDialog();
+		form_SupportUnban = gcnew SupportForm("òpò");
+		form_SupportUnban->ShowDialog();
 	}
 	private: System::Void detailsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 try{
-					 MessageBox::Show("Gamemode: " + array_match[0] + "\nFragLimit: " + array_match[1] + "\nTimeLimit: " + array_match[2] + "\nGoalsLimit: " + array_match[3] +
-						 "\nMinPlayers: " + array_match[4] + "\nMaxPlayers: " + array_match[5] + "\nJoinInProgress: " + array_match[6]);
-				 }
-				 catch (Exception^ w)
-				 {
-					 textBoxStatus->Text = "Service unavailable, restart a match";
-					 Connection[netCurrent]->addLog("[RAS] Service unavailable: MatchDetails");
-				 }
+		try{
+			MessageBox::Show("Gamemode: " + array_match[0] + "\nFragLimit: " + array_match[1] + "\nTimeLimit: " + array_match[2] + "\nGoalsLimit: " + array_match[3] +
+				"\nMinPlayers: " + array_match[4] + "\nMaxPlayers: " + array_match[5] + "\nJoinInProgress: " + array_match[6]);
+		}
+		catch (Exception^ w)
+		{
+			textBoxStatus->Text = "Service unavailable, restart a match";
+			Connection[netCurrent]->addLog("[RAS] Service unavailable: MatchDetails");
+		}
 	}
 	private: System::Void recentChatToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 MessageBox::Show("Service unavailable");
+		MessageBox::Show("Service unavailable");
 	}
 	private: System::Void buttonCredits_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Credits^ ShowCredits = gcnew Credits();
-				 ShowCredits->ShowDialog();
-	}
-	private: System::Void killMessageToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 SupportForm^ KillMessage = gcnew SupportForm(Connection[netCurrent]);
-				 KillMessage->ShowDialog();
-				 if (KillMessage->getEnabled())
-				 {
-					 EnabledMessage = true;
-					 str_KillMessage = KillMessage->getKill();
-					 str_SuicideMessage = KillMessage->getMessage();
-				 }
-				 else
-				 {
-					 EnabledMessage = false;
-					 str_KillMessage = KillMessage->getKill();
-					 str_SuicideMessage = KillMessage->getMessage();
-				 }
+		Credits^ ShowCredits = gcnew Credits();
+		ShowCredits->ShowDialog();
 	}
 	private: System::Void didYouKnowToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 DidYouKnow();
+		DidYouKnow();
 	}
 	private: System::Void creditsToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Credits^ ShowCredits = gcnew Credits();
-				 ShowCredits->ShowDialog();
+		Credits^ ShowCredits = gcnew Credits();
+		ShowCredits->ShowDialog();
 	}
-private: System::Void addAdminToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void buttonHost_Click(System::Object^  sender, System::EventArgs^  e) {
-	netHost = gcnew Host(13000);
-}
-private: System::Void buttonLocal_Click_1(System::Object^  sender, System::EventArgs^  e) {
-	form_MyDedicated = gcnew MyDedicated(MyDedicatedPath);
-	form_MyDedicated->ShowDialog();
-	if (!form_MyDedicated->IsExited())
-	{
-		ServerPage^ netConnect = gcnew ServerPage(gcnew Rcon("127.0.0.1", form_MyDedicated->getPort(), form_MyDedicated->getPassword()), serverList);
-		netCount++;
-		serverList->Controls->Add(netConnect->getPage(form_MyDedicated->getName(), gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid)));
+	private: System::Void addAdminToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
-}
-private: System::Void buttonAdd_Click(System::Object^  sender, System::EventArgs^  e) {
-	if (comboBoxIP->Text == "" || comboBoxPort->Text == "" || textPassword->Text == "" || textBoxName->Text == "")
-	{
-		MessageBox::Show("You forget IP, Password or Name of server, please repeat and retry","ERROR 01", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+	private: System::Void buttonLocal_Click_1(System::Object^  sender, System::EventArgs^  e) {
+		form_MyDedicated = gcnew MyDedicated(MyDedicatedPath,true);
+		form_MyDedicated->ShowDialog();
+		if (!form_MyDedicated->IsExited())
+		{
+			ServerPage^ netConnect = gcnew ServerPage(gcnew Rcon(form_MyDedicated->getIP(), form_MyDedicated->getPort(), form_MyDedicated->getPassword()), form_MyDedicated->getArgs(), serverList);
+			serverList->Controls->Add(netConnect->getPage(form_MyDedicated->getName(), gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid)));
+		}
 	}
-	else
-	{
-		bufferIP = comboBoxIP->Text;
-		bufferPort = comboBoxPort->Text;
-		ServerPage^ newPage = gcnew ServerPage(gcnew Rcon(comboBoxIP->Text, Convert::ToInt32(comboBoxPort->Text), textPassword->Text), serverList);
-		netCount++;
-		serverList->Controls->Add(newPage->getPage(textBoxName->Text, gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid)));
-	}
+	private: System::Void buttonAdd_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (comboBoxIP->Text == "" || comboBoxPort->Text == "" || textPassword->Text == "" || textBoxName->Text == "")
+		{
+			MessageBox::Show("You forget IP, Password or Name of server, please repeat and retry", "ERROR 01", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+		}
+		else
+		{
+			bufferIP = comboBoxIP->Text;
+			bufferPort = comboBoxPort->Text;
+			listPage = gcnew ServerPage(gcnew Rcon(comboBoxIP->Text, Convert::ToInt32(comboBoxPort->Text), textPassword->Text),"", serverList);
+			serverList->Controls->Add(listPage->getPage(textBoxName->Text, gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid)));
 
-}
+		}
+
+	}
+	private: System::Void buttonRemote_Click(System::Object^  sender, System::EventArgs^  e) {
+		form_MyDedicated = gcnew MyDedicated(MyDedicatedPath,false);
+		form_MyDedicated->ShowDialog();
+		if (!form_MyDedicated->IsExited())
+		{
+			ServerPage^ netConnect = gcnew ServerPage(gcnew Rcon(form_MyDedicated->getIP(), form_MyDedicated->getPort(), form_MyDedicated->getPassword()), form_MyDedicated->getArgs(), serverList);
+			serverList->Controls->Add(netConnect->getPage(form_MyDedicated->getName(), gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid)));
+			
+		}
+	}
 };
 }
+

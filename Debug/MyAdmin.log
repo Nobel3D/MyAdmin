@@ -1,8 +1,14 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(364,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  ServerPage.cpp
+Class\ServerPage.cpp(338): warning C4101: 'io' : unreferenced local variable
+Class\ServerPage.cpp(529): warning C4101: 'ex' : unreferenced local variable
+Class\ServerPage.cpp(589): warning C4101: 'ex' : unreferenced local variable
+  MyDedicated.cpp
+  Generating Code...
   MainForm.cpp
 c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\SupportForm.h(148): warning C4677: 'SupportForm': signature of non-private member contains assembly private type 'Rcon'
           c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\..\Class\Rcon.h(7) : see declaration of 'Rcon'
-c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(973): warning C4101: 'w' : unreferenced local variable
+c:\users\nobel3d\desktop\programmazione\c++\samhd\myadmin tis\src\myadmin\form\MainForm.h(904): warning C4101: 'w' : unreferenced local variable
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
   LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
   MyAdmin.vcxproj -> C:\Users\Nobel3D\Desktop\Programmazione\C++\SamHD\MyAdmin TIS\src\MyAdmin\Debug\Bin\MyAdmin.exe
